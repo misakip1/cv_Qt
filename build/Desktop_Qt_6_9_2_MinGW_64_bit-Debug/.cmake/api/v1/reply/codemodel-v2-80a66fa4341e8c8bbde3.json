@@ -1,0 +1,115 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-ba9a520d34f278f06cfb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "opencv_invoke",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "opencv_invoke::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-opencv_invoke-Debug-ef53056e20e71a7e1057.json",
+					"name" : "opencv_invoke",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "opencv_invoke_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-opencv_invoke_autogen-Debug-4b1b852ac9125fd42b4a.json",
+					"name" : "opencv_invoke_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "opencv_invoke_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-opencv_invoke_autogen_timestamp_deps-Debug-383fd709d6584519e965.json",
+					"name" : "opencv_invoke_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "opencv_invoke_lrelease::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-opencv_invoke_lrelease-Debug-cf2843b97115c369af40.json",
+					"name" : "opencv_invoke_lrelease",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "opencv_invoke_lupdate::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-opencv_invoke_lupdate-Debug-4211a54b660ea643ae9b.json",
+					"name" : "opencv_invoke_lupdate",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "release_translations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-release_translations-Debug-134a2f36750d33b3d486.json",
+					"name" : "release_translations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "update_translations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-update_translations-Debug-973310530a9f7b2f1696.json",
+					"name" : "update_translations",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug",
+		"source" : "E:/Qt_projet/opencv_invoke"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

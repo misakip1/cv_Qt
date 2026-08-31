@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/prix1">
+        <file>logo.png</file>
+    </qresource>
+    <qresource prefix="/style">
+        <file>style.qss</file>
+    </qresource>
+</RCC>

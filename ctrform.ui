@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CtrForm</class>
+ <widget class="QWidget" name="CtrForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>650</width>
+    <height>501</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>11</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* CtrForm 主窗体背景 */
+#CtrForm {
+    background: qlineargradient(
+        x1:0, y1:0, x2:0, y2:1,
+        stop:0 #f8ecf7,
+        stop:1 #eadef7
+    );
+}
+MultiSelectComboBox
+{
+background: qlineargradient(
+        x1:0,y1:0,x2:0,y2:1,
+        stop:0 #dba8e8,
+        stop:1 #b988da
+    );
+    color:white;
+    border:none;
+    border-radius:8px;
+    padding:7px 16px;
+    font-size:12px;
+}
+/* TabWidget 整体 */
+QTabWidget::pane {
+    border:1px solid #d4bce6;
+    border-radius:8px;
+    background-color:rgba(255,255,255,0.62);
+}
+QTabBar::tab {
+    background:rgba(255,255,255,0.5);
+    color:#6b4a87;
+    padding:6px 14px;
+    border:1px solid #d4bce6;
+    border-bottom:none;
+    border-top-left-radius:6px;
+    border-top-right-radius:6px;
+}
+QTabBar::tab:selected {
+    background:#dba8e8;
+    color:white;
+}
+QTabBar::tab:hover {
+    background:#e8cff2;
+}
+
+/* PushButton 按钮，新增按钮自动生效 */
+QPushButton {
+    background: qlineargradient(
+        x1:0,y1:0,x2:0,y2:1,
+        stop:0 #dba8e8,
+        stop:1 #b988da
+    );
+    color:white;
+    border:none;
+    border-radius:8px;
+    padding:7px 16px;
+    font-size:12px;
+}
+QPushButton:hover {
+    background: qlineargradient(
+        x1:0,y1:0,x2:0,y2:1,
+        stop:0 #e2b3ed,
+        stop:1 #c395e0
+    );
+}
+QPushButton:pressed {
+    background: qlineargradient(
+        x1:0,y1:0,x2:0,y2:1,
+        stop:0 #c985d9,
+        stop:1 #ab79cc
+    );
+}
+
+/* Label 文字，后续新增label自动适配文字颜色 */
+QLabel {
+    color:#6b4a87;
+    font-size:12px;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="1,10">
+   <item>
+    <widget class="QWidget" name="widget_4" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="TitelIcon" name="titwid" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>50</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>50</width>
+          <height>50</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="text">
+         <string>PushButton</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>检测区域</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,10,1">
+       <item>
+        <widget class="QWidget" name="widget" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,5,3,3,3">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>选择相机</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="MultiSelectComboBox" name="comboBox">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_2">
+            <property name="text">
+             <string>开始检测</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton">
+            <property name="text">
+             <string>结束检测</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Policy::Preferred</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>10</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_2" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_3"/>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_3" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>成功还是ng</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>缺陷个数</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>数据库复检</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="tab_3">
+      <attribute name="title">
+       <string>网络连接</string>
+      </attribute>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>TitelIcon</class>
+   <extends>QWidget</extends>
+   <header location="global">titelicon.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MultiSelectComboBox</class>
+   <extends>QComboBox</extends>
+   <header location="global">multiselectcombobox.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

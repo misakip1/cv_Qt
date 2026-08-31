@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>300</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>300</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>300</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* ========== 最外层主窗口 ========== */
+#MainWindow {
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #f8ecf7,
+        stop: 1 #eadef7
+    );
+    border: none;
+}
+
+/* QMainWindow 中心部件设透明，让主窗口背景透出来 */
+#MainWindow QWidget#centralWidget {
+    background: transparent;
+}
+
+/* ========== 登录卡片容器 ========== */
+#Loding {
+    background-color: rgba(255, 255, 255, 0.62);
+    border-radius: 16px;
+    border: 1px solid rgba(212, 188, 230, 0.5);
+}
+
+/* ========== 通用标签文字 ========== */
+QLabel {
+    color: #6b4a87;
+    font-size: 13px;
+}
+
+/* ========== 头像图片 ========== */
+#icon {
+    border-radius: 12px;
+}
+
+/* ========== 表单区域 ========== */
+#widget_3 {
+    background: transparent;
+}
+
+/* ========== 输入框 ========== */
+QLineEdit {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #d4bce6;
+    border-radius: 8px;
+    padding: 7px 12px;
+    color: #5a3d75;
+    font-size: 13px;
+    min-height: 22px;
+}
+
+QLineEdit:focus {
+    border-color: #c48fdd;
+    background-color: #ffffff;
+    outline: none;
+}
+
+QLineEdit::placeholder {
+    color: #b39dc9;
+}
+
+/* ========== 登录按钮 ========== */
+QPushButton {
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #dba8e8,
+        stop: 1 #b988da
+    );
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    min-height: 24px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #e2b3ed,
+        stop: 1 #c395e0
+    );
+}
+
+QPushButton:pressed {
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #c995d9,
+        stop: 1 #ab79cc
+    );
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>300</width>
+     <height>17</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
