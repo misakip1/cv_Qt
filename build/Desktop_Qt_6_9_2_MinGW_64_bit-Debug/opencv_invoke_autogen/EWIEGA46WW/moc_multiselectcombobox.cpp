@@ -41,23 +41,34 @@ template <> constexpr inline auto MultiSelectComboBox::qt_create_metaobjectdata<
         "MultiSelectComboBox",
         "selectionChanged",
         "",
+        "invokeMdi",
         "clear",
         "setCurrentText",
-        "aText"
+        "aText",
+        "NoselectItem",
+        "s"
     };
 
     QtMocHelpers::UintData qt_methods {
         // Signal 'selectionChanged'
         QtMocHelpers::SignalData<void()>(1, 2, QMC::AccessPublic, QMetaType::Void),
+        // Signal 'invokeMdi'
+        QtMocHelpers::SignalData<void(QString, bool)>(3, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 2 }, { QMetaType::Bool, 2 },
+        }}),
         // Slot 'clear'
-        QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessPublic, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessPublic, QMetaType::Void),
         // Slot 'setCurrentText'
-        QtMocHelpers::SlotData<void(const QString &)>(4, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::QString, 5 },
+        QtMocHelpers::SlotData<void(const QString &)>(5, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 6 },
         }}),
         // Slot 'setCurrentText'
-        QtMocHelpers::SlotData<void(const QStringList &)>(4, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::QStringList, 5 },
+        QtMocHelpers::SlotData<void(const QStringList &)>(5, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QStringList, 6 },
+        }}),
+        // Slot 'NoselectItem'
+        QtMocHelpers::SlotData<void(QString)>(7, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 8 },
         }}),
     };
     QtMocHelpers::UintData qt_properties {
@@ -83,14 +94,18 @@ void MultiSelectComboBox::qt_static_metacall(QObject *_o, QMetaObject::Call _c, 
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->selectionChanged(); break;
-        case 1: _t->clear(); break;
-        case 2: _t->setCurrentText((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 3: _t->setCurrentText((*reinterpret_cast< std::add_pointer_t<QStringList>>(_a[1]))); break;
+        case 1: _t->invokeMdi((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<bool>>(_a[2]))); break;
+        case 2: _t->clear(); break;
+        case 3: _t->setCurrentText((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 4: _t->setCurrentText((*reinterpret_cast< std::add_pointer_t<QStringList>>(_a[1]))); break;
+        case 5: _t->NoselectItem((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         default: ;
         }
     }
     if (_c == QMetaObject::IndexOfMethod) {
         if (QtMocHelpers::indexOfMethod<void (MultiSelectComboBox::*)()>(_a, &MultiSelectComboBox::selectionChanged, 0))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (MultiSelectComboBox::*)(QString , bool )>(_a, &MultiSelectComboBox::invokeMdi, 1))
             return;
     }
 }
@@ -114,14 +129,14 @@ int MultiSelectComboBox::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 6;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 6)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 4;
+        _id -= 6;
     }
     return _id;
 }
@@ -130,5 +145,11 @@ int MultiSelectComboBox::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 void MultiSelectComboBox::selectionChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
+}
+
+// SIGNAL 1
+void MultiSelectComboBox::invokeMdi(QString _t1, bool _t2)
+{
+    QMetaObject::activate<void>(this, &staticMetaObject, 1, nullptr, _t1, _t2);
 }
 QT_WARNING_POP

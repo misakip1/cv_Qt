@@ -1,8 +1,8 @@
 #include "MultiSelectComboBox.h"
 #include <QLineEdit>
-#include <QCheckBox>
-#include <QEvent>
 
+#include <QEvent>
+#include"ctrform.h"
 namespace {
 const int scSearchBarIndex = 0;
 }
@@ -82,12 +82,32 @@ void MultiSelectComboBox::stateChanged(int aState)
 void MultiSelectComboBox::addItem(const QString& aText, const QVariant& aUserData)
 {
     Q_UNUSED(aUserData);
-    QListWidgetItem* listWidgetItem = new QListWidgetItem(mListWidget);
-    QCheckBox* checkBox = new QCheckBox(this);
+
+    QListWidgetItem* listWidgetItem =
+        new QListWidgetItem(mListWidget);
+
+    QCheckBox* checkBox = new QCheckBox;
     checkBox->setText(aText);
+    mapper[aText]=checkBox;
     mListWidget->addItem(listWidgetItem);
     mListWidget->setItemWidget(listWidgetItem, checkBox);
-    connect(checkBox, &QCheckBox::stateChanged, this, &MultiSelectComboBox::stateChanged);
+
+    // 用于更新 ComboBox 显示内容
+    connect(checkBox,
+            &QCheckBox::stateChanged,
+            this,
+            &MultiSelectComboBox::stateChanged);
+
+    // 用于创建 / 删除 MDI 窗口
+    connect(checkBox,
+            &QCheckBox::toggled,
+            this,
+            [this, aText](bool checked)
+            {
+                emit invokeMdi(aText, checked);
+                qDebug()<<"触发创建mdi";
+            });
+
 }
 
 QStringList MultiSelectComboBox::currentText()
@@ -142,6 +162,7 @@ void MultiSelectComboBox::itemClicked(int aIndex)
         QWidget* widget = mListWidget->itemWidget(mListWidget->item(aIndex));
         QCheckBox *checkBox = static_cast<QCheckBox *>(widget);
         checkBox->setChecked(!checkBox->isChecked());
+
     }
 }
 
@@ -210,6 +231,13 @@ void MultiSelectComboBox::setCurrentText(const QStringList& aText)
     }
 }
 
+void MultiSelectComboBox::NoselectItem(QString s)
+{
+    QCheckBox*box=mapper[s];
+    box->setChecked(false);
+
+}
+
 void MultiSelectComboBox::ResetSelection()
 {
     int count = mListWidget->count();
@@ -221,3 +249,4 @@ void MultiSelectComboBox::ResetSelection()
         checkBox->setChecked(false);
     }
 }
+

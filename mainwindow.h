@@ -6,6 +6,8 @@
 #include"regfrom.h"
 #include"forgetfrom.h"
 #include"ctrform.h"
+#include"account.h"
+#include<QPointer>
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -30,6 +32,9 @@ private:
     RegFrom*regfrom_;
     ForgetFrom*forgetfrom_;
     CtrForm*ctrform_;
+    account*account_;
+    account_msg msg_;
+    QPointer<CtrForm> ctr_pointer_;
 
 
 };

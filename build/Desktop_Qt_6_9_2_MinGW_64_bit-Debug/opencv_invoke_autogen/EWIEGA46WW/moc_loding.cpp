@@ -43,9 +43,17 @@ template <> constexpr inline auto Loding::qt_create_metaobjectdata<qt_meta_tag_Z
         "",
         "switchCtr",
         "switchGet",
+        "accountMsg",
+        "account_msg",
         "on_pushButton_clicked",
         "on_pushButton_2_clicked",
-        "on_pushButton_3_clicked"
+        "on_pushButton_3_clicked",
+        "log",
+        "http_finsh",
+        "Moudel",
+        "id",
+        "ErrorCodes",
+        "errorres"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -55,12 +63,22 @@ template <> constexpr inline auto Loding::qt_create_metaobjectdata<qt_meta_tag_Z
         QtMocHelpers::SignalData<void()>(3, 2, QMC::AccessPublic, QMetaType::Void),
         // Signal 'switchGet'
         QtMocHelpers::SignalData<void()>(4, 2, QMC::AccessPublic, QMetaType::Void),
+        // Signal 'accountMsg'
+        QtMocHelpers::SignalData<void(account_msg)>(5, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { 0x80000000 | 6, 2 },
+        }}),
         // Slot 'on_pushButton_clicked'
-        QtMocHelpers::SlotData<void()>(5, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'on_pushButton_2_clicked'
-        QtMocHelpers::SlotData<void()>(6, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'on_pushButton_3_clicked'
         QtMocHelpers::SlotData<void()>(7, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_pushButton_2_clicked'
+        QtMocHelpers::SlotData<void()>(8, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_pushButton_3_clicked'
+        QtMocHelpers::SlotData<void()>(9, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'log'
+        QtMocHelpers::SlotData<bool()>(10, 2, QMC::AccessPrivate, QMetaType::Bool),
+        // Slot 'http_finsh'
+        QtMocHelpers::SlotData<void(Moudel, QString, ErrorCodes)>(11, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { 0x80000000 | 12, 13 }, { QMetaType::QString, 2 }, { 0x80000000 | 14, 15 },
+        }}),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -87,9 +105,13 @@ void Loding::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         case 0: _t->switchReg(); break;
         case 1: _t->switchCtr(); break;
         case 2: _t->switchGet(); break;
-        case 3: _t->on_pushButton_clicked(); break;
-        case 4: _t->on_pushButton_2_clicked(); break;
-        case 5: _t->on_pushButton_3_clicked(); break;
+        case 3: _t->accountMsg((*reinterpret_cast< std::add_pointer_t<account_msg>>(_a[1]))); break;
+        case 4: _t->on_pushButton_clicked(); break;
+        case 5: _t->on_pushButton_2_clicked(); break;
+        case 6: _t->on_pushButton_3_clicked(); break;
+        case 7: { bool _r = _t->log();
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
+        case 8: _t->http_finsh((*reinterpret_cast< std::add_pointer_t<Moudel>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<ErrorCodes>>(_a[3]))); break;
         default: ;
         }
     }
@@ -99,6 +121,8 @@ void Loding::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         if (QtMocHelpers::indexOfMethod<void (Loding::*)()>(_a, &Loding::switchCtr, 1))
             return;
         if (QtMocHelpers::indexOfMethod<void (Loding::*)()>(_a, &Loding::switchGet, 2))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (Loding::*)(account_msg )>(_a, &Loding::accountMsg, 3))
             return;
     }
 }
@@ -122,14 +146,14 @@ int Loding::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 9)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 9;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 6)
+        if (_id < 9)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 6;
+        _id -= 9;
     }
     return _id;
 }
@@ -150,5 +174,11 @@ void Loding::switchCtr()
 void Loding::switchGet()
 {
     QMetaObject::activate(this, &staticMetaObject, 2, nullptr);
+}
+
+// SIGNAL 3
+void Loding::accountMsg(account_msg _t1)
+{
+    QMetaObject::activate<void>(this, &staticMetaObject, 3, nullptr, _t1);
 }
 QT_WARNING_POP

@@ -2,6 +2,9 @@
 #define CTRFORM_H
 
 #include <QWidget>
+#include<QMap>
+#include"form.h"
+#include<QMdiSubWindow>
 
 namespace Ui {
 class CtrForm;
@@ -17,8 +20,13 @@ public:
 
 private:
     Ui::CtrForm *ui;
+    QMap<QString,QMdiSubWindow*> mapper_;
+
 signals:
     void SwitchAcount();
+    void closeSub(QString);
+public slots:
+    void createMdi(QString,bool);
 };
 
 #endif // CTRFORM_H

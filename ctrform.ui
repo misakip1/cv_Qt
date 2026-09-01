@@ -95,6 +95,11 @@ QPushButton:pressed {
 QLabel {
     color:#6b4a87;
     font-size:12px;
+}
+QMdiArea#mdiArea
+{
+    color:#6b4a87;
+    font-size:12px;
 }</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout" stretch="1,10">
@@ -124,9 +129,9 @@ QLabel {
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_3">
+       <widget class="QLabel" name="label_2">
         <property name="text">
-         <string>PushButton</string>
+         <string>Misaki</string>
         </property>
        </widget>
       </item>
@@ -211,26 +216,20 @@ QLabel {
        </item>
        <item>
         <widget class="QWidget" name="widget_2" native="true">
-         <layout class="QHBoxLayout" name="horizontalLayout_3"/>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QMdiArea" name="mdiArea">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
        <item>
         <widget class="QWidget" name="widget_3" native="true">
          <layout class="QHBoxLayout" name="horizontalLayout">
-          <item>
-           <widget class="QLabel" name="label_3">
-            <property name="text">
-             <string>成功还是ng</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="label_4">
-            <property name="text">
-             <string>缺陷个数</string>
-            </property>
-           </widget>
-          </item>
           <item>
            <spacer name="horizontalSpacer_2">
             <property name="orientation">

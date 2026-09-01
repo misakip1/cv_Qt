@@ -40,12 +40,22 @@ template <> constexpr inline auto CtrForm::qt_create_metaobjectdata<qt_meta_tag_
     QtMocHelpers::StringRefStorage qt_stringData {
         "CtrForm",
         "SwitchAcount",
-        ""
+        "",
+        "closeSub",
+        "createMdi"
     };
 
     QtMocHelpers::UintData qt_methods {
         // Signal 'SwitchAcount'
         QtMocHelpers::SignalData<void()>(1, 2, QMC::AccessPublic, QMetaType::Void),
+        // Signal 'closeSub'
+        QtMocHelpers::SignalData<void(QString)>(3, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 2 },
+        }}),
+        // Slot 'createMdi'
+        QtMocHelpers::SlotData<void(QString, bool)>(4, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 2 }, { QMetaType::Bool, 2 },
+        }}),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -70,11 +80,15 @@ void CtrForm::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->SwitchAcount(); break;
+        case 1: _t->closeSub((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 2: _t->createMdi((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<bool>>(_a[2]))); break;
         default: ;
         }
     }
     if (_c == QMetaObject::IndexOfMethod) {
         if (QtMocHelpers::indexOfMethod<void (CtrForm::*)()>(_a, &CtrForm::SwitchAcount, 0))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (CtrForm::*)(QString )>(_a, &CtrForm::closeSub, 1))
             return;
     }
 }
@@ -98,14 +112,14 @@ int CtrForm::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 3)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 3;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 3)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 1;
+        _id -= 3;
     }
     return _id;
 }
@@ -114,5 +128,11 @@ int CtrForm::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 void CtrForm::SwitchAcount()
 {
     QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
+}
+
+// SIGNAL 1
+void CtrForm::closeSub(QString _t1)
+{
+    QMetaObject::activate<void>(this, &staticMetaObject, 1, nullptr, _t1);
 }
 QT_WARNING_POP

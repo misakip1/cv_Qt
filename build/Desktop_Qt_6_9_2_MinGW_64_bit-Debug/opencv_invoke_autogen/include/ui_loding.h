@@ -39,7 +39,7 @@ public:
     QPushButton *pushButton_2;
     QLabel *password;
     QLabel *acount;
-    QLabel *label;
+    QLabel *tip;
     QPushButton *pushButton;
     QLineEdit *line_mach;
     QLineEdit *line_pwd;
@@ -192,10 +192,10 @@ public:
 
         gridLayout->addWidget(acount, 1, 0, 1, 1);
 
-        label = new QLabel(widget_3);
-        label->setObjectName("label");
+        tip = new QLabel(widget_3);
+        tip->setObjectName("tip");
 
-        gridLayout->addWidget(label, 0, 1, 1, 1);
+        gridLayout->addWidget(tip, 0, 1, 1, 1);
 
         pushButton = new QPushButton(widget_3);
         pushButton->setObjectName("pushButton");
@@ -246,7 +246,7 @@ public:
         pushButton_2->setText(QCoreApplication::translate("Loding", "\345\277\230\350\256\260\345\257\206\347\240\201", nullptr));
         password->setText(QCoreApplication::translate("Loding", "\345\257\206\347\240\201", nullptr));
         acount->setText(QCoreApplication::translate("Loding", "\350\264\246\345\217\267", nullptr));
-        label->setText(QString());
+        tip->setText(QString());
         pushButton->setText(QCoreApplication::translate("Loding", "\347\231\273\345\275\225", nullptr));
         machine->setText(QCoreApplication::translate("Loding", "\346\234\272\345\231\250\345\217\267", nullptr));
         pushButton_3->setText(QCoreApplication::translate("Loding", "\346\263\250\345\206\214", nullptr));

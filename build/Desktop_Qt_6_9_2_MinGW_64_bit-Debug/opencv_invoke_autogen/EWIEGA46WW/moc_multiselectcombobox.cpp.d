@@ -1,5 +1,6 @@
 E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invoke_autogen/EWIEGA46WW/moc_multiselectcombobox.cpp: E:/Qt_projet/opencv_invoke/multiselectcombobox.h \
   E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invoke_autogen/moc_predefs.h \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/QMap \
   E:/Qt/6.9.2/mingw_64/include/QtCore/q17memory.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/q20functional.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/q20iterator.h \
@@ -156,13 +157,16 @@ E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invo
   E:/Qt/6.9.2/mingw_64/include/QtGui/qvalidator.h \
   E:/Qt/6.9.2/mingw_64/include/QtGui/qwindowdefs.h \
   E:/Qt/6.9.2/mingw_64/include/QtGui/qwindowdefs_win.h \
+  E:/Qt/6.9.2/mingw_64/include/QtWidgets/QCheckBox \
   E:/Qt/6.9.2/mingw_64/include/QtWidgets/QComboBox \
   E:/Qt/6.9.2/mingw_64/include/QtWidgets/QListWidget \
+  E:/Qt/6.9.2/mingw_64/include/QtWidgets/qabstractbutton.h \
   E:/Qt/6.9.2/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
   E:/Qt/6.9.2/mingw_64/include/QtWidgets/qabstractitemview.h \
   E:/Qt/6.9.2/mingw_64/include/QtWidgets/qabstractscrollarea.h \
   E:/Qt/6.9.2/mingw_64/include/QtWidgets/qabstractslider.h \
   E:/Qt/6.9.2/mingw_64/include/QtWidgets/qabstractspinbox.h \
+  E:/Qt/6.9.2/mingw_64/include/QtWidgets/qcheckbox.h \
   E:/Qt/6.9.2/mingw_64/include/QtWidgets/qcombobox.h \
   E:/Qt/6.9.2/mingw_64/include/QtWidgets/qframe.h \
   E:/Qt/6.9.2/mingw_64/include/QtWidgets/qlistview.h \

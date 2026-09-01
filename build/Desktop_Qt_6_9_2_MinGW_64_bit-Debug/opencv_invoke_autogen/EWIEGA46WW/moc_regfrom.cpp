@@ -41,7 +41,9 @@ template <> constexpr inline auto RegFrom::qt_create_metaobjectdata<qt_meta_tag_
         "RegFrom",
         "switchLog",
         "",
-        "on_pushButton_3_clicked"
+        "on_pushButton_3_clicked",
+        "on_pushButton_2_clicked",
+        "reg"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -49,6 +51,10 @@ template <> constexpr inline auto RegFrom::qt_create_metaobjectdata<qt_meta_tag_
         QtMocHelpers::SignalData<void()>(1, 2, QMC::AccessPublic, QMetaType::Void),
         // Slot 'on_pushButton_3_clicked'
         QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_pushButton_2_clicked'
+        QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'reg'
+        QtMocHelpers::SlotData<bool()>(5, 2, QMC::AccessPrivate, QMetaType::Bool),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -74,6 +80,9 @@ void RegFrom::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
         switch (_id) {
         case 0: _t->switchLog(); break;
         case 1: _t->on_pushButton_3_clicked(); break;
+        case 2: _t->on_pushButton_2_clicked(); break;
+        case 3: { bool _r = _t->reg();
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
         default: ;
         }
     }
@@ -102,14 +111,14 @@ int RegFrom::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 4)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 4;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 2)
+        if (_id < 4)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 2;
+        _id -= 4;
     }
     return _id;
 }

@@ -1,5 +1,6 @@
 E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invoke_autogen/EWIEGA46WW/moc_ctrform.cpp: E:/Qt_projet/opencv_invoke/ctrform.h \
   E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invoke_autogen/moc_predefs.h \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/QMap \
   E:/Qt/6.9.2/mingw_64/include/QtCore/q17memory.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/q20functional.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/q20iterator.h \
@@ -151,7 +152,9 @@ E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invo
   E:/Qt/6.9.2/mingw_64/include/QtGui/qtransform.h \
   E:/Qt/6.9.2/mingw_64/include/QtGui/qwindowdefs.h \
   E:/Qt/6.9.2/mingw_64/include/QtGui/qwindowdefs_win.h \
+  E:/Qt/6.9.2/mingw_64/include/QtWidgets/QMdiSubWindow \
   E:/Qt/6.9.2/mingw_64/include/QtWidgets/QWidget \
+  E:/Qt/6.9.2/mingw_64/include/QtWidgets/qmdisubwindow.h \
   E:/Qt/6.9.2/mingw_64/include/QtWidgets/qsizepolicy.h \
   E:/Qt/6.9.2/mingw_64/include/QtWidgets/qtwidgets-config.h \
   E:/Qt/6.9.2/mingw_64/include/QtWidgets/qtwidgetsexports.h \
@@ -369,4 +372,5 @@ E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invo
   E:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/sys/types.h \
   E:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
   E:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
-  E:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h
+  E:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
+  E:/Qt_projet/opencv_invoke/form.h

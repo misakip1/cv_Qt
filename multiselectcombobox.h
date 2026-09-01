@@ -4,7 +4,8 @@
 
 #include <QComboBox>
 #include <QListWidget>
-
+#include<QMap>
+#include <QCheckBox>
 class MultiSelectComboBox : public QComboBox
 {
     Q_OBJECT
@@ -20,14 +21,15 @@ public:
     void SetPlaceHolderText(const QString& aPlaceHolderText);
     void ResetSelection();
 
+
 signals:
     void selectionChanged();
-
+    void invokeMdi(QString,bool);
 public slots:
     void clear();
     void setCurrentText(const QString& aText);
     void setCurrentText(const QStringList& aText);
-
+    void NoselectItem(QString s);
 protected:
     void wheelEvent(QWheelEvent* aWheelEvent) override;
     bool eventFilter(QObject* aObject, QEvent* aEvent) override;
@@ -38,6 +40,7 @@ private:
     void onSearch(const QString& aSearchString);
     void itemClicked(int aIndex);
 
+    QMap<QString,QCheckBox*> mapper;
     QListWidget* mListWidget;
     QLineEdit* mLineEdit;
     QLineEdit* mSearchBar;

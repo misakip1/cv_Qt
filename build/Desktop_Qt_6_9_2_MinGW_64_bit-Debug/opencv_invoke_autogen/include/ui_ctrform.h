@@ -13,6 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QMdiArea>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QTabWidget>
@@ -30,7 +31,7 @@ public:
     QWidget *widget_4;
     QHBoxLayout *horizontalLayout_4;
     TitelIcon *titwid;
-    QPushButton *pushButton_3;
+    QLabel *label_2;
     QSpacerItem *horizontalSpacer_3;
     QTabWidget *tabWidget;
     QWidget *tab;
@@ -44,10 +45,9 @@ public:
     QSpacerItem *horizontalSpacer;
     QWidget *widget_2;
     QHBoxLayout *horizontalLayout_3;
+    QMdiArea *mdiArea;
     QWidget *widget_3;
     QHBoxLayout *horizontalLayout;
-    QLabel *label_3;
-    QLabel *label_4;
     QSpacerItem *horizontalSpacer_2;
     QWidget *tab_2;
     QWidget *tab_3;
@@ -138,6 +138,11 @@ public:
 "QLabel {\n"
 "    color:#6b4a87;\n"
 "    font-size:12px;\n"
+"}\n"
+"QMdiArea#mdiArea\n"
+"{\n"
+"    color:#6b4a87;\n"
+"    font-size:12px;\n"
 "}"));
         verticalLayout = new QVBoxLayout(CtrForm);
         verticalLayout->setObjectName("verticalLayout");
@@ -157,10 +162,10 @@ public:
 
         horizontalLayout_4->addWidget(titwid);
 
-        pushButton_3 = new QPushButton(widget_4);
-        pushButton_3->setObjectName("pushButton_3");
+        label_2 = new QLabel(widget_4);
+        label_2->setObjectName("label_2");
 
-        horizontalLayout_4->addWidget(pushButton_3);
+        horizontalLayout_4->addWidget(label_2);
 
         horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
@@ -220,6 +225,12 @@ public:
         widget_2->setObjectName("widget_2");
         horizontalLayout_3 = new QHBoxLayout(widget_2);
         horizontalLayout_3->setObjectName("horizontalLayout_3");
+        mdiArea = new QMdiArea(widget_2);
+        mdiArea->setObjectName("mdiArea");
+        mdiArea->setStyleSheet(QString::fromUtf8(""));
+
+        horizontalLayout_3->addWidget(mdiArea);
+
 
         verticalLayout_2->addWidget(widget_2);
 
@@ -227,16 +238,6 @@ public:
         widget_3->setObjectName("widget_3");
         horizontalLayout = new QHBoxLayout(widget_3);
         horizontalLayout->setObjectName("horizontalLayout");
-        label_3 = new QLabel(widget_3);
-        label_3->setObjectName("label_3");
-
-        horizontalLayout->addWidget(label_3);
-
-        label_4 = new QLabel(widget_3);
-        label_4->setObjectName("label_4");
-
-        horizontalLayout->addWidget(label_4);
-
         horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
         horizontalLayout->addItem(horizontalSpacer_2);
@@ -271,12 +272,10 @@ public:
     void retranslateUi(QWidget *CtrForm)
     {
         CtrForm->setWindowTitle(QCoreApplication::translate("CtrForm", "Form", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("CtrForm", "PushButton", nullptr));
+        label_2->setText(QCoreApplication::translate("CtrForm", "Misaki", nullptr));
         label->setText(QCoreApplication::translate("CtrForm", "\351\200\211\346\213\251\347\233\270\346\234\272", nullptr));
         pushButton_2->setText(QCoreApplication::translate("CtrForm", "\345\274\200\345\247\213\346\243\200\346\265\213", nullptr));
         pushButton->setText(QCoreApplication::translate("CtrForm", "\347\273\223\346\235\237\346\243\200\346\265\213", nullptr));
-        label_3->setText(QCoreApplication::translate("CtrForm", "\346\210\220\345\212\237\350\277\230\346\230\257ng", nullptr));
-        label_4->setText(QCoreApplication::translate("CtrForm", "\347\274\272\351\231\267\344\270\252\346\225\260", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("CtrForm", "\346\243\200\346\265\213\345\214\272\345\237\237", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("CtrForm", "\346\225\260\346\215\256\345\272\223\345\244\215\346\243\200", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QCoreApplication::translate("CtrForm", "\347\275\221\347\273\234\350\277\236\346\216\245", nullptr));

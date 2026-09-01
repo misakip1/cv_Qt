@@ -6,15 +6,15 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    loding_=new Loding(this);
-    this->setCentralWidget(loding_);
-    loding_->setWindowFlags(Qt::CustomizeWindowHint|Qt::FramelessWindowHint);
+    // loding_=new Loding(this);
+    // this->setCentralWidget(loding_);
+    // loding_->setWindowFlags(Qt::CustomizeWindowHint|Qt::FramelessWindowHint);
 
-    loding_->show();
-    connect(loding_,&Loding::switchReg,this,&MainWindow::SlotSwitchReg);
-    connect(loding_,&Loding::switchGet,this,&MainWindow::SlotSwitchGet);
-    connect(loding_,&Loding::switchCtr,this,&MainWindow::SlotSwitchCtr);
-   // SlotSwitchCtr();
+    // loding_->show();
+    // connect(loding_,&Loding::switchReg,this,&MainWindow::SlotSwitchReg);
+    // connect(loding_,&Loding::switchGet,this,&MainWindow::SlotSwitchGet);
+    // connect(loding_,&Loding::switchCtr,this,&MainWindow::SlotSwitchCtr);
+    SlotSwitchCtr();
 
 
 }
@@ -53,6 +53,9 @@ void MainWindow::SlotSwitchLog()
     connect(loding_,&Loding::switchReg,this,&MainWindow::SlotSwitchReg);
     connect(loding_,&Loding::switchGet,this,&MainWindow::SlotSwitchGet);
     connect(loding_,&Loding::switchCtr,this,&MainWindow::SlotSwitchCtr);
+    connect(loding_,&Loding::accountMsg,this,[this](account_msg msg){
+        this->msg_=msg;
+    });
 }
 
 void MainWindow::SlotSwitchGet()
@@ -78,18 +81,31 @@ void MainWindow::SlotSwitchCtr()
     {
         oldWidget->deleteLater(); // Qt推荐，安全删除
     }
-
+    if(ctr_pointer_.isNull())
+    {
     ctrform_=new CtrForm(this);
-    this->setCentralWidget(ctrform_);
     ctrform_->setWindowFlags(Qt::CustomizeWindowHint|Qt::FramelessWindowHint);
+    }
+    this->setCentralWidget(ctrform_);
     ctrform_->show();
     this->setMinimumSize(QSize(800,900));
     this->setMaximumSize(QWIDGETSIZE_MAX, QWIDGETSIZE_MAX);
     connect(ctrform_,&CtrForm::SwitchAcount,this,&MainWindow::SwitchAcount);
 
+
 }
 
 void MainWindow::SwitchAcount()
 {
+
+    account_=new account(msg_,this);
+    this->setCentralWidget(account_);
+    account_->setWindowFlags(Qt::CustomizeWindowHint|Qt::FramelessWindowHint);
+    account_->show();
+    this->setMinimumSize(QSize(800,900));
+    this->setMaximumSize(QWIDGETSIZE_MAX, QWIDGETSIZE_MAX);
+    connect(account_,&account::switchCtr,this,&MainWindow::SlotSwitchCtr);
+
+
 
 }

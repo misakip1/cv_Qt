@@ -1,5 +1,10 @@
 E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invoke_autogen/EWIEGA46WW/moc_mainwindow.cpp: E:/Qt_projet/opencv_invoke/mainwindow.h \
   E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invoke_autogen/moc_predefs.h \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/QJsonDocument \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/QJsonObject \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/QMap \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/QPointer \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/QString \
   E:/Qt/6.9.2/mingw_64/include/QtCore/q17memory.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/q20functional.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/q20iterator.h \
@@ -21,6 +26,9 @@ E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invo
   E:/Qt/6.9.2/mingw_64/include/QtCore/qbytearrayalgorithms.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qbytearraylist.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qbytearrayview.h \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/qcalendar.h \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/qcborcommon.h \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/qcborvalue.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qchar.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qcompare.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qcompare_impl.h \
@@ -34,6 +42,7 @@ E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invo
   E:/Qt/6.9.2/mingw_64/include/QtCore/qcontiguouscache.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qdarwinhelpers.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qdatastream.h \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/qdatetime.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qdebug.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qendian.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qexceptionhandling.h \
@@ -50,9 +59,14 @@ E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invo
   E:/Qt/6.9.2/mingw_64/include/QtCore/qiodevicebase.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qiterable.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qiterator.h \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/qjsondocument.h \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/qjsonobject.h \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/qjsonparseerror.h \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/qjsonvalue.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qlatin1stringview.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qline.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qlist.h \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/qlocale.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qlogging.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qmalloc.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qmap.h \
@@ -70,9 +84,11 @@ E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invo
   E:/Qt/6.9.2/mingw_64/include/QtCore/qoverload.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qpair.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qpoint.h \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/qpointer.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qprocessordetection.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qrect.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qrefcount.h \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/qregularexpression.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qscopedpointer.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qscopeguard.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qset.h \
@@ -119,7 +135,9 @@ E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invo
   E:/Qt/6.9.2/mingw_64/include/QtCore/qtversionchecks.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qtypeinfo.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qtypes.h \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/qurl.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qutf8stringview.h \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/quuid.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qvariant.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qvarlengtharray.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qversiontagging.h \
@@ -152,8 +170,10 @@ E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invo
   E:/Qt/6.9.2/mingw_64/include/QtGui/qwindowdefs.h \
   E:/Qt/6.9.2/mingw_64/include/QtGui/qwindowdefs_win.h \
   E:/Qt/6.9.2/mingw_64/include/QtWidgets/QMainWindow \
+  E:/Qt/6.9.2/mingw_64/include/QtWidgets/QMdiSubWindow \
   E:/Qt/6.9.2/mingw_64/include/QtWidgets/QWidget \
   E:/Qt/6.9.2/mingw_64/include/QtWidgets/qmainwindow.h \
+  E:/Qt/6.9.2/mingw_64/include/QtWidgets/qmdisubwindow.h \
   E:/Qt/6.9.2/mingw_64/include/QtWidgets/qsizepolicy.h \
   E:/Qt/6.9.2/mingw_64/include/QtWidgets/qtabwidget.h \
   E:/Qt/6.9.2/mingw_64/include/QtWidgets/qtwidgets-config.h \
@@ -373,7 +393,10 @@ E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invo
   E:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
   E:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   E:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
+  E:/Qt_projet/opencv_invoke/account.h \
+  E:/Qt_projet/opencv_invoke/const.h \
   E:/Qt_projet/opencv_invoke/ctrform.h \
   E:/Qt_projet/opencv_invoke/forgetfrom.h \
+  E:/Qt_projet/opencv_invoke/form.h \
   E:/Qt_projet/opencv_invoke/loding.h \
   E:/Qt_projet/opencv_invoke/regfrom.h
