@@ -1,6 +1,7 @@
 #ifndef CONST_H
 #define CONST_H
 #include<QString>
+#include<QImage>
 enum class Moudel
 {
     RegModel=1001,
@@ -19,7 +20,11 @@ struct account_msg
     QString machine_code;
 
 };
+struct CameraFrame
+{
 
+
+};
 inline QString path="http://192.168.88.128:8080/";
 
 #endif // CONST_H

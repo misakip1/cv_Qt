@@ -157,6 +157,7 @@ opencv_invoke_autogen/timestamp: \
 	E:/Qt/6.9.2/mingw_64/include/QtCore/qversiontagging.h \
 	E:/Qt/6.9.2/mingw_64/include/QtCore/qxptype_traits.h \
 	E:/Qt/6.9.2/mingw_64/include/QtCore/qyieldcpu.h \
+	E:/Qt/6.9.2/mingw_64/include/QtGui/QImage \
 	E:/Qt/6.9.2/mingw_64/include/QtGui/qaction.h \
 	E:/Qt/6.9.2/mingw_64/include/QtGui/qbitmap.h \
 	E:/Qt/6.9.2/mingw_64/include/QtGui/qbrush.h \

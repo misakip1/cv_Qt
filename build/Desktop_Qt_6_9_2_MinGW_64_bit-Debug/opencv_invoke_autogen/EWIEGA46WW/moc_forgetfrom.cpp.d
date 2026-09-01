@@ -140,6 +140,7 @@ E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invo
   E:/Qt/6.9.2/mingw_64/include/QtCore/qversiontagging.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qxptype_traits.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qyieldcpu.h \
+  E:/Qt/6.9.2/mingw_64/include/QtGui/QImage \
   E:/Qt/6.9.2/mingw_64/include/QtGui/qaction.h \
   E:/Qt/6.9.2/mingw_64/include/QtGui/qbitmap.h \
   E:/Qt/6.9.2/mingw_64/include/QtGui/qbrush.h \
