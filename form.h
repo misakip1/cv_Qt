@@ -15,6 +15,13 @@ public:
     explicit Form(QWidget *parent = nullptr);
     ~Form();
     void showPix(CameraTask);
+private slots:
+    void on_pushButton_2_clicked();
+    void on_pushButton_clicked();
+
+signals:
+    void stop_();
+    void start_();
 private:
     Ui::Form *ui;
     QPixmap map1_;

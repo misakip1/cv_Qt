@@ -12,6 +12,7 @@ Form::Form(QWidget *parent)
 
 Form::~Form()
 {
+
     qDebug()<<"被删除";
     delete ui;
 }
@@ -25,3 +26,17 @@ void Form::showPix(CameraTask task)
     ui->label_3->setPixmap(map11_);
     ui->label_4->setPixmap(map11_);
 }
+
+void Form::on_pushButton_2_clicked()
+{
+    emit stop_();
+}
+
+
+void Form::on_pushButton_clicked()
+{
+    qDebug()<<"点击检测";
+    qDebug() << "[emit start]"<< "form =" << this;
+    emit start_();
+}
+

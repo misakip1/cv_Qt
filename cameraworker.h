@@ -10,34 +10,36 @@
 #include <QCameraFormat>
 #include <QDebug>
 #include <QImageCapture>
-#include<QImage>
-#include "const.h"
+#include <QImage>
 #include <atomic>
+#include "const.h"
 
+// 相机采集 Worker：运行在独立 QThread 中，负责单个相机的创建、采集、出帧。
+// 线程亲和性：本对象被 moveToThread 到采集线程，start/stop/onVideoFrameChanged 都在该线程执行。
 class CameraWorker : public QObject
 {
     Q_OBJECT
 
 public:
-
     explicit CameraWorker(
         QCameraDevice device,
         QObject* parent = nullptr);
 
-    void requestStop() { stop_.store(true); }
-
+    // 主线程直接调用：原子置停止标志，立即对采集线程可见。
+    // 不依赖事件队列（队列可能被高频帧事件占满导致 stop 事件饿死），
+    // 采集线程的下一次帧回调看到该标志后会立即停相机、阻断帧流。
+    void requestStop();
+    ~CameraWorker();
 public slots:
+    void start();   // 采集线程执行：创建相机对象并开始采集
+    void stop();    // 采集线程执行：停相机并清理相机对象
 
-    void start();
-    void stop();
-
-private slots:
-
+    void test();
+private :
     void onVideoFrameChanged(
         const QVideoFrame& frame);
 
 signals:
-
     void frameReady(
        const CameraFrame frame);
 
@@ -45,20 +47,19 @@ signals:
         QString error);
 
 private:
-    QString cameraName;//相机名
-    QString cameraCode;//相机编号
-    QDateTime captureTime;//时间戳
+    QString cameraName;       // 相机名
+    QString cameraCode;       // 相机编号
+    QDateTime captureTime;    // 时间戳
+
     QMediaCaptureSession* session_ = nullptr;
-
-    QCamera* camera_;
-
+    QCamera* camera_ = nullptr;
     QCameraDevice device_;
-
-    QVideoSink* videoSink_;
+    QVideoSink* videoSink_ = nullptr;
     QImage image_;
     std::shared_ptr<CameraFrame> camera_form_;
-    QImageCapture* capture_;
-    std::atomic<bool> stop_{false};
+    QImageCapture* capture_ = nullptr;
+
+    std::atomic<bool> stop_{false};   // 跨线程停止标志（原子，无锁）
 };
 
 #endif

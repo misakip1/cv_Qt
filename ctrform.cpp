@@ -51,17 +51,22 @@ void CtrForm::createMdi(QString s, bool ok)
         form->setAttribute(Qt::WA_StyledBackground, true);
         QMdiSubWindow*sub_form_=ui->mdiArea->addSubWindow(form);
         connect(mannger_->camaer_thread_[s].processor_,&CameraProcessor::cv_finsh,form,&Form::showPix);
+        connect(form,&Form::stop_,mannger_->camaer_thread_[s].worker,&CameraWorker::stop,Qt::QueuedConnection);
+        auto conn=connect(form,&Form::start_,mannger_->camaer_thread_[s].worker,&CameraWorker::start,Qt::QueuedConnection);
         connect(sub_form_, &QMdiSubWindow::destroyed, this, [=](){
-         mannger_->removeWorker(s);
+         mannger_->removeWorker(s); 
             mapper_.remove(s);
+         qDebug()<<"结束ctr"<<mapper_.size();
             emit closeSub(s);
             qDebug() << "子窗口关闭，key=" << s;
         });
         mapper_[s]=sub_form_;
-
+          qDebug()<<"开启ctr"<<mapper_.size();
         form->show();
 
         ui->mdiArea->tileSubWindows();
+
+
 
     }
     else
