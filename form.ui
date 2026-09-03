@@ -30,59 +30,35 @@
        </widget>
       </item>
       <item>
-       <widget class="QCheckBox" name="checkBox_6">
-        <property name="text">
-         <string>划痕</string>
-        </property>
-       </widget>
+       <widget class="MultiSelectComboBox" name="comboBox"/>
       </item>
       <item>
-       <widget class="QCheckBox" name="checkBox_5">
-        <property name="text">
-         <string>裂纹</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QCheckBox" name="checkBox_4">
-        <property name="text">
-         <string>凹坑</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QCheckBox" name="checkBox_3">
-        <property name="text">
-         <string>毛刺</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QCheckBox" name="checkBox">
-        <property name="text">
-         <string>污渍</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QCheckBox" name="checkBox_2">
-        <property name="text">
-         <string>缺料</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <spacer name="horizontalSpacer_2">
+       <widget class="Line" name="line">
         <property name="orientation">
-         <enum>Qt::Orientation::Horizontal</enum>
+         <enum>Qt::Orientation::Vertical</enum>
         </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="text">
+         <string>开始检测</string>
         </property>
-       </spacer>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="text">
+         <string>暂停检测</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="text">
+         <string>停止检测</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>
@@ -121,7 +97,14 @@
    </item>
    <item>
     <widget class="QWidget" name="widget_4" native="true">
-     <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1,5">
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,1,1,5">
+      <item>
+       <widget class="QLabel" name="label_6">
+        <property name="text">
+         <string>帧率</string>
+        </property>
+       </widget>
+      </item>
       <item>
        <widget class="QLabel" name="label">
         <property name="text">
@@ -154,6 +137,13 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MultiSelectComboBox</class>
+   <extends>QComboBox</extends>
+   <header location="global">multiselectcombobox.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

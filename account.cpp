@@ -21,6 +21,7 @@ account::account(account_msg msg,QWidget* par)
 // 析构函数记得释放ui
 account::~account()
 {
+    qDebug()<<"释放account";
     delete ui;
 }
 
@@ -28,4 +29,3 @@ void account::on_pushButton_clicked()
 {
     emit switchCtr();
 }
-

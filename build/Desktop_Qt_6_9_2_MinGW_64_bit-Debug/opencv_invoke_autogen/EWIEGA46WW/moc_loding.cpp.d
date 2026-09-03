@@ -1,5 +1,6 @@
 E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invoke_autogen/EWIEGA46WW/moc_loding.cpp: E:/Qt_projet/opencv_invoke/loding.h \
   E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invoke_autogen/moc_predefs.h \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/QDateTime \
   E:/Qt/6.9.2/mingw_64/include/QtCore/QString \
   E:/Qt/6.9.2/mingw_64/include/QtCore/q17memory.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/q20functional.h \
@@ -22,6 +23,7 @@ E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invo
   E:/Qt/6.9.2/mingw_64/include/QtCore/qbytearrayalgorithms.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qbytearraylist.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qbytearrayview.h \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/qcalendar.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qchar.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qcompare.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qcompare_impl.h \
@@ -35,6 +37,7 @@ E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invo
   E:/Qt/6.9.2/mingw_64/include/QtCore/qcontiguouscache.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qdarwinhelpers.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qdatastream.h \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/qdatetime.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qdebug.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qendian.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qexceptionhandling.h \
@@ -54,6 +57,7 @@ E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invo
   E:/Qt/6.9.2/mingw_64/include/QtCore/qlatin1stringview.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qline.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qlist.h \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/qlocale.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qlogging.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qmalloc.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qmap.h \

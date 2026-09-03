@@ -153,6 +153,38 @@ build CMakeFiles/opencv_invoke.dir/form.cpp.obj: CXX_COMPILER__opencv_invoke_uns
   OBJECT_DIR = CMakeFiles\opencv_invoke.dir
   OBJECT_FILE_DIR = CMakeFiles\opencv_invoke.dir
 
+build CMakeFiles/opencv_invoke.dir/cameramanager.cpp.obj: CXX_COMPILER__opencv_invoke_unscanned_Debug E$:/Qt_projet/opencv_invoke/cameramanager.cpp || cmake_object_order_depends_target_opencv_invoke
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIAWIDGETS_LIB -DQT_MULTIMEDIA_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\opencv_invoke.dir\cameramanager.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -fdiagnostics-color=always
+  INCLUDES = -IE:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invoke_autogen/include -IE:/Qt_projet/opencv_invoke -isystem E:/Qt/6.9.2/mingw_64/include/QtCore -isystem E:/Qt/6.9.2/mingw_64/include -isystem E:/Qt/6.9.2/mingw_64/mkspecs/win32-g++ -isystem E:/Qt/6.9.2/mingw_64/include/QtWidgets -isystem E:/Qt/6.9.2/mingw_64/include/QtGui -isystem E:/Qt/6.9.2/mingw_64/include/QtNetwork -isystem E:/Qt/6.9.2/mingw_64/include/QtSql -isystem E:/Qt/6.9.2/mingw_64/include/QtMultimedia -isystem E:/Qt/6.9.2/mingw_64/include/QtMultimediaWidgets
+  OBJECT_DIR = CMakeFiles\opencv_invoke.dir
+  OBJECT_FILE_DIR = CMakeFiles\opencv_invoke.dir
+
+build CMakeFiles/opencv_invoke.dir/cameraworker.cpp.obj: CXX_COMPILER__opencv_invoke_unscanned_Debug E$:/Qt_projet/opencv_invoke/cameraworker.cpp || cmake_object_order_depends_target_opencv_invoke
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIAWIDGETS_LIB -DQT_MULTIMEDIA_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\opencv_invoke.dir\cameraworker.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -fdiagnostics-color=always
+  INCLUDES = -IE:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invoke_autogen/include -IE:/Qt_projet/opencv_invoke -isystem E:/Qt/6.9.2/mingw_64/include/QtCore -isystem E:/Qt/6.9.2/mingw_64/include -isystem E:/Qt/6.9.2/mingw_64/mkspecs/win32-g++ -isystem E:/Qt/6.9.2/mingw_64/include/QtWidgets -isystem E:/Qt/6.9.2/mingw_64/include/QtGui -isystem E:/Qt/6.9.2/mingw_64/include/QtNetwork -isystem E:/Qt/6.9.2/mingw_64/include/QtSql -isystem E:/Qt/6.9.2/mingw_64/include/QtMultimedia -isystem E:/Qt/6.9.2/mingw_64/include/QtMultimediaWidgets
+  OBJECT_DIR = CMakeFiles\opencv_invoke.dir
+  OBJECT_FILE_DIR = CMakeFiles\opencv_invoke.dir
+
+build CMakeFiles/opencv_invoke.dir/cameraprocessor.cpp.obj: CXX_COMPILER__opencv_invoke_unscanned_Debug E$:/Qt_projet/opencv_invoke/cameraprocessor.cpp || cmake_object_order_depends_target_opencv_invoke
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIAWIDGETS_LIB -DQT_MULTIMEDIA_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\opencv_invoke.dir\cameraprocessor.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -fdiagnostics-color=always
+  INCLUDES = -IE:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invoke_autogen/include -IE:/Qt_projet/opencv_invoke -isystem E:/Qt/6.9.2/mingw_64/include/QtCore -isystem E:/Qt/6.9.2/mingw_64/include -isystem E:/Qt/6.9.2/mingw_64/mkspecs/win32-g++ -isystem E:/Qt/6.9.2/mingw_64/include/QtWidgets -isystem E:/Qt/6.9.2/mingw_64/include/QtGui -isystem E:/Qt/6.9.2/mingw_64/include/QtNetwork -isystem E:/Qt/6.9.2/mingw_64/include/QtSql -isystem E:/Qt/6.9.2/mingw_64/include/QtMultimedia -isystem E:/Qt/6.9.2/mingw_64/include/QtMultimediaWidgets
+  OBJECT_DIR = CMakeFiles\opencv_invoke.dir
+  OBJECT_FILE_DIR = CMakeFiles\opencv_invoke.dir
+
+build CMakeFiles/opencv_invoke.dir/cvinvoke.cpp.obj: CXX_COMPILER__opencv_invoke_unscanned_Debug E$:/Qt_projet/opencv_invoke/cvinvoke.cpp || cmake_object_order_depends_target_opencv_invoke
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIAWIDGETS_LIB -DQT_MULTIMEDIA_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\opencv_invoke.dir\cvinvoke.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -fdiagnostics-color=always
+  INCLUDES = -IE:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invoke_autogen/include -IE:/Qt_projet/opencv_invoke -isystem E:/Qt/6.9.2/mingw_64/include/QtCore -isystem E:/Qt/6.9.2/mingw_64/include -isystem E:/Qt/6.9.2/mingw_64/mkspecs/win32-g++ -isystem E:/Qt/6.9.2/mingw_64/include/QtWidgets -isystem E:/Qt/6.9.2/mingw_64/include/QtGui -isystem E:/Qt/6.9.2/mingw_64/include/QtNetwork -isystem E:/Qt/6.9.2/mingw_64/include/QtSql -isystem E:/Qt/6.9.2/mingw_64/include/QtMultimedia -isystem E:/Qt/6.9.2/mingw_64/include/QtMultimediaWidgets
+  OBJECT_DIR = CMakeFiles\opencv_invoke.dir
+  OBJECT_FILE_DIR = CMakeFiles\opencv_invoke.dir
+
 build CMakeFiles/opencv_invoke.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_opencv_invoke_translations.cpp.obj: CXX_COMPILER__opencv_invoke_unscanned_Debug E$:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_opencv_invoke_translations.cpp || cmake_object_order_depends_target_opencv_invoke
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIAWIDGETS_LIB -DQT_MULTIMEDIA_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\opencv_invoke.dir\build\Desktop_Qt_6_9_2_MinGW_64_bit-Debug\.qt\rcc\qrc_opencv_invoke_translations.cpp.obj.d
@@ -169,7 +201,7 @@ build CMakeFiles/opencv_invoke.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt
 #############################################
 # Link the executable opencv_invoke.exe
 
-build opencv_invoke.exe: CXX_EXECUTABLE_LINKER__opencv_invoke_Debug CMakeFiles/opencv_invoke.dir/opencv_invoke_autogen/mocs_compilation.cpp.obj CMakeFiles/opencv_invoke.dir/main.cpp.obj CMakeFiles/opencv_invoke.dir/mainwindow.cpp.obj CMakeFiles/opencv_invoke.dir/loding.cpp.obj CMakeFiles/opencv_invoke.dir/account.cpp.obj CMakeFiles/opencv_invoke.dir/regfrom.cpp.obj CMakeFiles/opencv_invoke.dir/forgetfrom.cpp.obj CMakeFiles/opencv_invoke.dir/ctrform.cpp.obj CMakeFiles/opencv_invoke.dir/titelicon.cpp.obj CMakeFiles/opencv_invoke.dir/multiselectcombobox.cpp.obj CMakeFiles/opencv_invoke.dir/httpserver.cpp.obj CMakeFiles/opencv_invoke.dir/threadpoll.cpp.obj CMakeFiles/opencv_invoke.dir/form.cpp.obj CMakeFiles/opencv_invoke.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_opencv_invoke_translations.cpp.obj | E$:/Qt/6.9.2/mingw_64/lib/libQt6Sql.a E$:/Qt/6.9.2/mingw_64/lib/libQt6MultimediaWidgets.a E$:/Qt/6.9.2/mingw_64/lib/libQt6Widgets.a E$:/Qt/6.9.2/mingw_64/lib/libQt6Multimedia.a E$:/Qt/6.9.2/mingw_64/lib/libQt6Network.a E$:/Qt/6.9.2/mingw_64/lib/libQt6Gui.a E$:/Qt/6.9.2/mingw_64/lib/libQt6Core.a E$:/Qt/6.9.2/mingw_64/lib/libQt6EntryPoint.a || opencv_invoke_autogen opencv_invoke_autogen_timestamp_deps
+build opencv_invoke.exe: CXX_EXECUTABLE_LINKER__opencv_invoke_Debug CMakeFiles/opencv_invoke.dir/opencv_invoke_autogen/mocs_compilation.cpp.obj CMakeFiles/opencv_invoke.dir/main.cpp.obj CMakeFiles/opencv_invoke.dir/mainwindow.cpp.obj CMakeFiles/opencv_invoke.dir/loding.cpp.obj CMakeFiles/opencv_invoke.dir/account.cpp.obj CMakeFiles/opencv_invoke.dir/regfrom.cpp.obj CMakeFiles/opencv_invoke.dir/forgetfrom.cpp.obj CMakeFiles/opencv_invoke.dir/ctrform.cpp.obj CMakeFiles/opencv_invoke.dir/titelicon.cpp.obj CMakeFiles/opencv_invoke.dir/multiselectcombobox.cpp.obj CMakeFiles/opencv_invoke.dir/httpserver.cpp.obj CMakeFiles/opencv_invoke.dir/threadpoll.cpp.obj CMakeFiles/opencv_invoke.dir/form.cpp.obj CMakeFiles/opencv_invoke.dir/cameramanager.cpp.obj CMakeFiles/opencv_invoke.dir/cameraworker.cpp.obj CMakeFiles/opencv_invoke.dir/cameraprocessor.cpp.obj CMakeFiles/opencv_invoke.dir/cvinvoke.cpp.obj CMakeFiles/opencv_invoke.dir/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qrc_opencv_invoke_translations.cpp.obj | E$:/Qt/6.9.2/mingw_64/lib/libQt6Sql.a E$:/Qt/6.9.2/mingw_64/lib/libQt6MultimediaWidgets.a E$:/Qt/6.9.2/mingw_64/lib/libQt6Widgets.a E$:/Qt/6.9.2/mingw_64/lib/libQt6Multimedia.a E$:/Qt/6.9.2/mingw_64/lib/libQt6Network.a E$:/Qt/6.9.2/mingw_64/lib/libQt6Gui.a E$:/Qt/6.9.2/mingw_64/lib/libQt6Core.a E$:/Qt/6.9.2/mingw_64/lib/libQt6EntryPoint.a || opencv_invoke_autogen opencv_invoke_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = E:/Qt/6.9.2/mingw_64/lib/libQt6Sql.a  E:/Qt/6.9.2/mingw_64/lib/libQt6MultimediaWidgets.a  E:/Qt/6.9.2/mingw_64/lib/libQt6Widgets.a  E:/Qt/6.9.2/mingw_64/lib/libQt6Multimedia.a  E:/Qt/6.9.2/mingw_64/lib/libQt6Network.a  -lws2_32  E:/Qt/6.9.2/mingw_64/lib/libQt6Gui.a  E:/Qt/6.9.2/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  E:/Qt/6.9.2/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32

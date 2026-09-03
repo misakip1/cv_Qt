@@ -6,6 +6,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    stack_=new QStackedWidget(this);
     // loding_=new Loding(this);
     // this->setCentralWidget(loding_);
     // loding_->setWindowFlags(Qt::CustomizeWindowHint|Qt::FramelessWindowHint);
@@ -14,6 +15,14 @@ MainWindow::MainWindow(QWidget *parent)
     // connect(loding_,&Loding::switchReg,this,&MainWindow::SlotSwitchReg);
     // connect(loding_,&Loding::switchGet,this,&MainWindow::SlotSwitchGet);
     // connect(loding_,&Loding::switchCtr,this,&MainWindow::SlotSwitchCtr);
+    ctr_pointer_=new CtrForm(this);
+    ctr_pointer_->setWindowFlags(Qt::CustomizeWindowHint|Qt::FramelessWindowHint);
+    connect(ctr_pointer_,&CtrForm::SwitchAcount,this,&MainWindow::SwitchAcount);
+    stack_->addWidget(ctr_pointer_);
+
+    account_pointer_=new account(msg_,this);
+    connect(account_pointer_,&account::switchCtr,this,&MainWindow::SlotSwitchCtr);
+    stack_->addWidget(account_pointer_);
     SlotSwitchCtr();
 
 
@@ -77,35 +86,20 @@ void MainWindow::SlotSwitchGet()
 void MainWindow::SlotSwitchCtr()
 {
     QWidget* oldWidget = this->centralWidget();
-    if(oldWidget)
+    // 判断：如果旧页面不是account_pointer_，才delete
+    if(oldWidget && oldWidget != stack_)
     {
-        oldWidget->deleteLater(); // Qt推荐，安全删除
+        oldWidget->deleteLater();
     }
-    if(ctr_pointer_.isNull())
-    {
-    ctrform_=new CtrForm(this);
-    ctrform_->setWindowFlags(Qt::CustomizeWindowHint|Qt::FramelessWindowHint);
-    }
-    this->setCentralWidget(ctrform_);
-    ctrform_->show();
+
+    stack_->setCurrentWidget(ctr_pointer_);
+    this->setCentralWidget(stack_);
     this->setMinimumSize(QSize(800,900));
     this->setMaximumSize(QWIDGETSIZE_MAX, QWIDGETSIZE_MAX);
-    connect(ctrform_,&CtrForm::SwitchAcount,this,&MainWindow::SwitchAcount);
-
-
 }
-
 void MainWindow::SwitchAcount()
 {
-
-    account_=new account(msg_,this);
-    this->setCentralWidget(account_);
-    account_->setWindowFlags(Qt::CustomizeWindowHint|Qt::FramelessWindowHint);
-    account_->show();
-    this->setMinimumSize(QSize(800,900));
-    this->setMaximumSize(QWIDGETSIZE_MAX, QWIDGETSIZE_MAX);
-    connect(account_,&account::switchCtr,this,&MainWindow::SlotSwitchCtr);
-
+     stack_->setCurrentWidget(account_pointer_);
 
 
 }

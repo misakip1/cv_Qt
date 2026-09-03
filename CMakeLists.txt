@@ -5,6 +5,9 @@ find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets LinguistTools Network Sql 
 find_package(Qt6 REQUIRED COMPONENTS Core)
 find_package(Qt6 REQUIRED COMPONENTS Core)
 find_package(Qt6 REQUIRED COMPONENTS Core)
+find_package(Qt6 REQUIRED COMPONENTS Core)
+find_package(Qt6 REQUIRED COMPONENTS Core)
+find_package(Qt6 REQUIRED COMPONENTS Core)
 
 qt_standard_project_setup()
 
@@ -27,6 +30,10 @@ qt_add_executable(opencv_invoke
     threadpoll.h threadpoll.cpp
     form.h form.cpp form.ui
     const.h
+    cameramanager.h cameramanager.cpp
+    cameraworker.h cameraworker.cpp
+    cameraprocessor.h cameraprocessor.cpp
+    cvinvoke.h cvinvoke.cpp
 
 
 )
@@ -46,6 +53,9 @@ target_link_libraries(opencv_invoke
         Qt::Multimedia
         Qt::MultimediaWidgets
 )
+target_link_libraries(opencv_invoke PRIVATE Qt6::Core)
+target_link_libraries(opencv_invoke PRIVATE Qt6::Core)
+target_link_libraries(opencv_invoke PRIVATE Qt6::Core)
 target_link_libraries(opencv_invoke PRIVATE Qt6::Core)
 target_link_libraries(opencv_invoke PRIVATE Qt6::Core)
 target_link_libraries(opencv_invoke PRIVATE Qt6::Core)

@@ -4,11 +4,13 @@
 #include<QPixmap>
 #include <QCameraDevice>
 #include <QMediaDevices>
+
 CtrForm::CtrForm(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::CtrForm)
 {
     ui->setupUi(this);
+    mannger_=new CameraManager;
     connect(ui->titwid,&TitelIcon::SwitchAcount,this,&CtrForm::SwitchAcount);
     QList<QCameraDevice> cameraList = QMediaDevices::videoInputs();
     QStringList s;
@@ -35,7 +37,7 @@ CtrForm::~CtrForm()
         }
     }
     mapper_.clear(); // 清空映射，避免后续野访问
-
+    delete mannger_;
     delete ui;
 }
 
@@ -44,16 +46,16 @@ void CtrForm::createMdi(QString s, bool ok)
 
     if(ok)
     {
+        mannger_->addWorker(s);
         Form*form=new Form(this);
         form->setAttribute(Qt::WA_StyledBackground, true);
         QMdiSubWindow*sub_form_=ui->mdiArea->addSubWindow(form);
+        connect(mannger_->camaer_thread_[s].processor_,&CameraProcessor::cv_finsh,form,&Form::showPix);
         connect(sub_form_, &QMdiSubWindow::destroyed, this, [=](){
-
+         mannger_->removeWorker(s);
             mapper_.remove(s);
             emit closeSub(s);
             qDebug() << "子窗口关闭，key=" << s;
-
-
         });
         mapper_[s]=sub_form_;
 
@@ -68,6 +70,7 @@ void CtrForm::createMdi(QString s, bool ok)
         {
             return;
         }
+        mannger_->removeWorker(s);
         QMdiSubWindow*sub_mdi=mapper_[s];
         mapper_.remove(s);
         sub_mdi->close();

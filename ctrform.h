@@ -5,7 +5,7 @@
 #include<QMap>
 #include"form.h"
 #include<QMdiSubWindow>
-
+#include"cameramanager.h"
 namespace Ui {
 class CtrForm;
 }
@@ -21,7 +21,7 @@ public:
 private:
     Ui::CtrForm *ui;
     QMap<QString,QMdiSubWindow*> mapper_;
-
+    CameraManager*mannger_;
 signals:
     void SwitchAcount();
     void closeSub(QString);

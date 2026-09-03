@@ -1,5 +1,10 @@
 #include "threadpoll.h"
 
+ThreadPoll::~ThreadPoll()
+{
+    stop();
+}
+
 ThreadPoll::ThreadPoll(int num):stop_(false){
     if(num<=2||num>=8)
         thread_num_=5;

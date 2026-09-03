@@ -1,5 +1,6 @@
 E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invoke_autogen/EWIEGA46WW/moc_regfrom.cpp: E:/Qt_projet/opencv_invoke/regfrom.h \
   E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invoke_autogen/moc_predefs.h \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/QDateTime \
   E:/Qt/6.9.2/mingw_64/include/QtCore/QJsonDocument \
   E:/Qt/6.9.2/mingw_64/include/QtCore/QJsonObject \
   E:/Qt/6.9.2/mingw_64/include/QtCore/QString \

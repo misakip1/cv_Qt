@@ -16,7 +16,7 @@ protected:
 public:
     static T&getInstance()
     {
-    static T t;
+        static T t;
         return t;
     }
 

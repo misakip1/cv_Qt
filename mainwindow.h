@@ -8,6 +8,7 @@
 #include"ctrform.h"
 #include"account.h"
 #include<QPointer>
+#include<QStackedWidget>
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -31,10 +32,10 @@ private:
     Loding*loding_;
     RegFrom*regfrom_;
     ForgetFrom*forgetfrom_;
-    CtrForm*ctrform_;
-    account*account_;
+    QPointer<account>account_pointer_;
     account_msg msg_;
     QPointer<CtrForm> ctr_pointer_;
+    QStackedWidget*stack_;
 
 
 };

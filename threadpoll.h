@@ -9,38 +9,36 @@
 #include<vector>
 #include<functional>
 #include <future>
+#include <type_traits>
 class ThreadPoll:public Singleton<ThreadPoll>
 {
     friend class Singleton<ThreadPoll>;
     using Task=std::packaged_task<void()>;
 public:
     ~ThreadPoll();
-    template<typename F,typename ...Args>
-    auto post(F&&f,Args&&...args)->decltype(f(args...))
-        {
-        using RetType=decltype(f(args...));
-            if (stop_.load())
-                return std::future<RetType>{};
+    template<typename F, typename ...Args>
+    auto post(F&& f, Args&&... args) -> std::future<std::invoke_result_t<F, Args...>>
+    {
+        using RetType = std::invoke_result_t<F, Args...>;
 
-            // 核心：用 shared_ptr 管理 packaged_task 生命周期
-            // 1. packaged_task 不可拷贝，只能移动；放入队列需要通过lambda捕获指针间接调用
-            // 2. 用 bind + 完美转发，把函数+参数打包成无参可调用对象
-            auto task = std::make_shared<std::packaged_task<RetType()>>(
-                std::bind(std::forward<F>(f), std::forward<Args>(args)...));
+        if (stop_.load())
+            return std::future<RetType>{};
 
-            // 从 packaged_task 中获取 future，交给调用方拿结果
-            std::future<RetType> ret = task->get_future();
-            {
-                // 加锁保护任务队列，保证入队操作线程安全
-                std::lock_guard<std::mutex> cv_mt(mtx_);
-                // 封装成统一的 void() 任务入队：lambda 捕获 shared_ptr，执行真正的任务
-                queue_.emplace([task] { (*task)(); });
+        // 用 lambda 替代 bind，内部用 std::invoke 统一调用
+        auto task = std::make_shared<std::packaged_task<RetType()>>(
+            [f = std::forward<F>(f), ...args = std::forward<Args>(args)]() mutable {
+                return std::invoke(std::move(f), std::move(args)...);
             }
-            // 唤醒一个休眠中的工作线程来执行任务
-            cv_.notify_one();
-            return ret;
+            );
 
+        std::future<RetType> ret = task->get_future();
+        {
+            std::lock_guard<std::mutex> lock(mtx_);
+            queue_.emplace([task] { (*task)(); });
         }
+        cv_.notify_one();
+        return ret;
+    }
 private:
     ThreadPoll(int num=5);
     void start();

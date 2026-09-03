@@ -1,6 +1,12 @@
 E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invoke_autogen/EWIEGA46WW/moc_ctrform.cpp: E:/Qt_projet/opencv_invoke/ctrform.h \
   E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invoke_autogen/moc_predefs.h \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/QDateTime \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/QDebug \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/QList \
   E:/Qt/6.9.2/mingw_64/include/QtCore/QMap \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/QObject \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/QString \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/QThread \
   E:/Qt/6.9.2/mingw_64/include/QtCore/q17memory.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/q20functional.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/q20iterator.h \
@@ -22,6 +28,7 @@ E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invo
   E:/Qt/6.9.2/mingw_64/include/QtCore/qbytearrayalgorithms.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qbytearraylist.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qbytearrayview.h \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/qcalendar.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qchar.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qcompare.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qcompare_impl.h \
@@ -35,7 +42,10 @@ E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invo
   E:/Qt/6.9.2/mingw_64/include/QtCore/qcontiguouscache.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qdarwinhelpers.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qdatastream.h \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/qdatetime.h \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/qdeadlinetimer.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qdebug.h \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/qelapsedtimer.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qendian.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qexceptionhandling.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qflags.h \
@@ -54,6 +64,7 @@ E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invo
   E:/Qt/6.9.2/mingw_64/include/QtCore/qlatin1stringview.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qline.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qlist.h \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/qlocale.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qlogging.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qmalloc.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qmap.h \
@@ -110,6 +121,7 @@ E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invo
   E:/Qt/6.9.2/mingw_64/include/QtCore/qtenvironmentvariables.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qtextstream.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qtformat_impl.h \
+  E:/Qt/6.9.2/mingw_64/include/QtCore/qthread.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qtmetamacros.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qtnoop.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qtpreprocessorsupport.h \
@@ -126,6 +138,7 @@ E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invo
   E:/Qt/6.9.2/mingw_64/include/QtCore/qversiontagging.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qxptype_traits.h \
   E:/Qt/6.9.2/mingw_64/include/QtCore/qyieldcpu.h \
+  E:/Qt/6.9.2/mingw_64/include/QtGui/QImage \
   E:/Qt/6.9.2/mingw_64/include/QtGui/qaction.h \
   E:/Qt/6.9.2/mingw_64/include/QtGui/qbitmap.h \
   E:/Qt/6.9.2/mingw_64/include/QtGui/qbrush.h \
@@ -152,6 +165,26 @@ E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invo
   E:/Qt/6.9.2/mingw_64/include/QtGui/qtransform.h \
   E:/Qt/6.9.2/mingw_64/include/QtGui/qwindowdefs.h \
   E:/Qt/6.9.2/mingw_64/include/QtGui/qwindowdefs_win.h \
+  E:/Qt/6.9.2/mingw_64/include/QtMultimedia/QCamera \
+  E:/Qt/6.9.2/mingw_64/include/QtMultimedia/QCameraDevice \
+  E:/Qt/6.9.2/mingw_64/include/QtMultimedia/QCameraFormat \
+  E:/Qt/6.9.2/mingw_64/include/QtMultimedia/QImageCapture \
+  E:/Qt/6.9.2/mingw_64/include/QtMultimedia/QMediaCaptureSession \
+  E:/Qt/6.9.2/mingw_64/include/QtMultimedia/QMediaDevices \
+  E:/Qt/6.9.2/mingw_64/include/QtMultimedia/QVideoFrame \
+  E:/Qt/6.9.2/mingw_64/include/QtMultimedia/QVideoSink \
+  E:/Qt/6.9.2/mingw_64/include/QtMultimedia/qcamera.h \
+  E:/Qt/6.9.2/mingw_64/include/QtMultimedia/qcameradevice.h \
+  E:/Qt/6.9.2/mingw_64/include/QtMultimedia/qimagecapture.h \
+  E:/Qt/6.9.2/mingw_64/include/QtMultimedia/qmediacapturesession.h \
+  E:/Qt/6.9.2/mingw_64/include/QtMultimedia/qmediadevices.h \
+  E:/Qt/6.9.2/mingw_64/include/QtMultimedia/qtmultimedia-config.h \
+  E:/Qt/6.9.2/mingw_64/include/QtMultimedia/qtmultimediaexports.h \
+  E:/Qt/6.9.2/mingw_64/include/QtMultimedia/qtmultimediaglobal.h \
+  E:/Qt/6.9.2/mingw_64/include/QtMultimedia/qtvideo.h \
+  E:/Qt/6.9.2/mingw_64/include/QtMultimedia/qvideoframe.h \
+  E:/Qt/6.9.2/mingw_64/include/QtMultimedia/qvideoframeformat.h \
+  E:/Qt/6.9.2/mingw_64/include/QtMultimedia/qvideosink.h \
   E:/Qt/6.9.2/mingw_64/include/QtWidgets/QMdiSubWindow \
   E:/Qt/6.9.2/mingw_64/include/QtWidgets/QWidget \
   E:/Qt/6.9.2/mingw_64/include/QtWidgets/qmdisubwindow.h \
@@ -160,6 +193,7 @@ E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invo
   E:/Qt/6.9.2/mingw_64/include/QtWidgets/qtwidgetsexports.h \
   E:/Qt/6.9.2/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
   E:/Qt/6.9.2/mingw_64/include/QtWidgets/qwidget.h \
+  E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/Thread \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/algorithm \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/array \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/atomic \
@@ -172,6 +206,7 @@ E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invo
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/allocated_ptr.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/allocator.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/atomic_base.h \
+  E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/atomic_futex.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/atomic_lockfree_defines.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_string.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_string.tcc \
@@ -182,6 +217,7 @@ E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invo
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cpp_type_traits.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cxxabi_forced.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cxxabi_init_exception.h \
+  E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/deque.tcc \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/enable_special_members.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/erase_if.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception.h \
@@ -218,10 +254,13 @@ E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invo
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/specfun.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/std_abs.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/std_function.h \
+  E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/std_mutex.h \
+  E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/std_thread.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_algo.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_algobase.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_bvector.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_construct.h \
+  E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_deque.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_function.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_heap.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_iterator.h \
@@ -233,6 +272,7 @@ E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invo
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_multiset.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_numeric.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_pair.h \
+  E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_queue.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_raw_storage_iter.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_relops.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_set.h \
@@ -245,7 +285,9 @@ E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invo
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/streambuf_iterator.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/string_view.tcc \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stringfwd.h \
+  E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/this_thread_sleep.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uniform_int_dist.h \
+  E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unique_lock.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unique_ptr.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unordered_map.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unordered_set.h \
@@ -261,6 +303,7 @@ E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invo
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/clocale \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cmath \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/compare \
+  E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/condition_variable \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstddef \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstdint \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstdio \
@@ -270,6 +313,7 @@ E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invo
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cwchar \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/debug/assertions.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/debug/debug.h \
+  E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/deque \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/exception \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/aligned_buffer.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/alloc_traits.h \
@@ -279,6 +323,7 @@ E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invo
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/string_conversions.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/type_traits.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/functional \
+  E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/future \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/initializer_list \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iosfwd \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iterator \
@@ -286,6 +331,7 @@ E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invo
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/list \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/map \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/memory \
+  E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/mutex \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/new \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/numeric \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/optional \
@@ -294,6 +340,7 @@ E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invo
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_memory_defs.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_numeric_defs.h \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/pstl_config.h \
+  E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/queue \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ratio \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/set \
   E:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/stdexcept \
@@ -373,4 +420,10 @@ E:/Qt_projet/opencv_invoke/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/opencv_invo
   E:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
   E:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   E:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
-  E:/Qt_projet/opencv_invoke/form.h
+  E:/Qt_projet/opencv_invoke/Singleton.h \
+  E:/Qt_projet/opencv_invoke/cameramanager.h \
+  E:/Qt_projet/opencv_invoke/cameraprocessor.h \
+  E:/Qt_projet/opencv_invoke/cameraworker.h \
+  E:/Qt_projet/opencv_invoke/const.h \
+  E:/Qt_projet/opencv_invoke/form.h \
+  E:/Qt_projet/opencv_invoke/threadpoll.h

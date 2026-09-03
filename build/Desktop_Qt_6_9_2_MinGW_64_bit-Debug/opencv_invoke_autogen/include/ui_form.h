@@ -11,12 +11,14 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QCheckBox>
+#include <QtWidgets/QFrame>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
+#include <multiselectcombobox.h>
 
 QT_BEGIN_NAMESPACE
 
@@ -27,13 +29,11 @@ public:
     QWidget *widget_5;
     QHBoxLayout *horizontalLayout_5;
     QLabel *label_5;
-    QCheckBox *checkBox_6;
-    QCheckBox *checkBox_5;
-    QCheckBox *checkBox_4;
-    QCheckBox *checkBox_3;
-    QCheckBox *checkBox;
-    QCheckBox *checkBox_2;
-    QSpacerItem *horizontalSpacer_2;
+    MultiSelectComboBox *comboBox;
+    QFrame *line;
+    QPushButton *pushButton;
+    QPushButton *pushButton_2;
+    QPushButton *pushButton_3;
     QWidget *widget;
     QHBoxLayout *horizontalLayout_2;
     QWidget *widget_2;
@@ -44,6 +44,7 @@ public:
     QLabel *label_4;
     QWidget *widget_4;
     QHBoxLayout *horizontalLayout;
+    QLabel *label_6;
     QLabel *label;
     QLabel *label_2;
     QSpacerItem *horizontalSpacer;
@@ -67,39 +68,32 @@ public:
 
         horizontalLayout_5->addWidget(label_5);
 
-        checkBox_6 = new QCheckBox(widget_5);
-        checkBox_6->setObjectName("checkBox_6");
+        comboBox = new MultiSelectComboBox(widget_5);
+        comboBox->setObjectName("comboBox");
 
-        horizontalLayout_5->addWidget(checkBox_6);
+        horizontalLayout_5->addWidget(comboBox);
 
-        checkBox_5 = new QCheckBox(widget_5);
-        checkBox_5->setObjectName("checkBox_5");
+        line = new QFrame(widget_5);
+        line->setObjectName("line");
+        line->setFrameShape(QFrame::Shape::VLine);
+        line->setFrameShadow(QFrame::Shadow::Sunken);
 
-        horizontalLayout_5->addWidget(checkBox_5);
+        horizontalLayout_5->addWidget(line);
 
-        checkBox_4 = new QCheckBox(widget_5);
-        checkBox_4->setObjectName("checkBox_4");
+        pushButton = new QPushButton(widget_5);
+        pushButton->setObjectName("pushButton");
 
-        horizontalLayout_5->addWidget(checkBox_4);
+        horizontalLayout_5->addWidget(pushButton);
 
-        checkBox_3 = new QCheckBox(widget_5);
-        checkBox_3->setObjectName("checkBox_3");
+        pushButton_2 = new QPushButton(widget_5);
+        pushButton_2->setObjectName("pushButton_2");
 
-        horizontalLayout_5->addWidget(checkBox_3);
+        horizontalLayout_5->addWidget(pushButton_2);
 
-        checkBox = new QCheckBox(widget_5);
-        checkBox->setObjectName("checkBox");
+        pushButton_3 = new QPushButton(widget_5);
+        pushButton_3->setObjectName("pushButton_3");
 
-        horizontalLayout_5->addWidget(checkBox);
-
-        checkBox_2 = new QCheckBox(widget_5);
-        checkBox_2->setObjectName("checkBox_2");
-
-        horizontalLayout_5->addWidget(checkBox_2);
-
-        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        horizontalLayout_5->addItem(horizontalSpacer_2);
+        horizontalLayout_5->addWidget(pushButton_3);
 
 
         verticalLayout->addWidget(widget_5);
@@ -139,6 +133,11 @@ public:
         widget_4->setObjectName("widget_4");
         horizontalLayout = new QHBoxLayout(widget_4);
         horizontalLayout->setObjectName("horizontalLayout");
+        label_6 = new QLabel(widget_4);
+        label_6->setObjectName("label_6");
+
+        horizontalLayout->addWidget(label_6);
+
         label = new QLabel(widget_4);
         label->setObjectName("label");
 
@@ -153,9 +152,9 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer);
 
-        horizontalLayout->setStretch(0, 1);
         horizontalLayout->setStretch(1, 1);
-        horizontalLayout->setStretch(2, 5);
+        horizontalLayout->setStretch(2, 1);
+        horizontalLayout->setStretch(3, 5);
 
         verticalLayout->addWidget(widget_4);
 
@@ -171,14 +170,12 @@ public:
     {
         Form->setWindowTitle(QCoreApplication::translate("Form", "Form", nullptr));
         label_5->setText(QCoreApplication::translate("Form", "\346\243\200\346\265\213\346\226\271\346\241\210", nullptr));
-        checkBox_6->setText(QCoreApplication::translate("Form", "\345\210\222\347\227\225", nullptr));
-        checkBox_5->setText(QCoreApplication::translate("Form", "\350\243\202\347\272\271", nullptr));
-        checkBox_4->setText(QCoreApplication::translate("Form", "\345\207\271\345\235\221", nullptr));
-        checkBox_3->setText(QCoreApplication::translate("Form", "\346\257\233\345\210\272", nullptr));
-        checkBox->setText(QCoreApplication::translate("Form", "\346\261\241\346\270\215", nullptr));
-        checkBox_2->setText(QCoreApplication::translate("Form", "\347\274\272\346\226\231", nullptr));
+        pushButton->setText(QCoreApplication::translate("Form", "\345\274\200\345\247\213\346\243\200\346\265\213", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("Form", "\346\232\202\345\201\234\346\243\200\346\265\213", nullptr));
+        pushButton_3->setText(QCoreApplication::translate("Form", "\345\201\234\346\255\242\346\243\200\346\265\213", nullptr));
         label_3->setText(QString());
         label_4->setText(QString());
+        label_6->setText(QCoreApplication::translate("Form", "\345\270\247\347\216\207", nullptr));
         label->setText(QCoreApplication::translate("Form", "\347\212\266\346\200\201", nullptr));
         label_2->setText(QCoreApplication::translate("Form", "\347\274\272\351\231\267\346\225\260\351\207\217", nullptr));
     } // retranslateUi
