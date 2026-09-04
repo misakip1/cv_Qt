@@ -27,6 +27,7 @@ signals:
     void closeSub(QString);
 public slots:
     void createMdi(QString,bool);
+
 };
 
 #endif // CTRFORM_H

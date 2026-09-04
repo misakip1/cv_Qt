@@ -62,7 +62,7 @@ void MainWindow::SlotSwitchLog()
     connect(loding_,&Loding::switchReg,this,&MainWindow::SlotSwitchReg);
     connect(loding_,&Loding::switchGet,this,&MainWindow::SlotSwitchGet);
     connect(loding_,&Loding::switchCtr,this,&MainWindow::SlotSwitchCtr);
-    connect(loding_,&Loding::accountMsg,this,[this](account_msg msg){
+    connect(loding_,&Loding::accountMsg,this,[this](AccountMsg msg){
         this->msg_=msg;
     });
 }

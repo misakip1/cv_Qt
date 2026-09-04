@@ -44,7 +44,7 @@ template <> constexpr inline auto Loding::qt_create_metaobjectdata<qt_meta_tag_Z
         "switchCtr",
         "switchGet",
         "accountMsg",
-        "account_msg",
+        "AccountMsg",
         "on_pushButton_clicked",
         "on_pushButton_2_clicked",
         "on_pushButton_3_clicked",
@@ -64,7 +64,7 @@ template <> constexpr inline auto Loding::qt_create_metaobjectdata<qt_meta_tag_Z
         // Signal 'switchGet'
         QtMocHelpers::SignalData<void()>(4, 2, QMC::AccessPublic, QMetaType::Void),
         // Signal 'accountMsg'
-        QtMocHelpers::SignalData<void(account_msg)>(5, 2, QMC::AccessPublic, QMetaType::Void, {{
+        QtMocHelpers::SignalData<void(AccountMsg)>(5, 2, QMC::AccessPublic, QMetaType::Void, {{
             { 0x80000000 | 6, 2 },
         }}),
         // Slot 'on_pushButton_clicked'
@@ -105,7 +105,7 @@ void Loding::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         case 0: _t->switchReg(); break;
         case 1: _t->switchCtr(); break;
         case 2: _t->switchGet(); break;
-        case 3: _t->accountMsg((*reinterpret_cast< std::add_pointer_t<account_msg>>(_a[1]))); break;
+        case 3: _t->accountMsg((*reinterpret_cast< std::add_pointer_t<AccountMsg>>(_a[1]))); break;
         case 4: _t->on_pushButton_clicked(); break;
         case 5: _t->on_pushButton_2_clicked(); break;
         case 6: _t->on_pushButton_3_clicked(); break;
@@ -122,7 +122,7 @@ void Loding::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
             return;
         if (QtMocHelpers::indexOfMethod<void (Loding::*)()>(_a, &Loding::switchGet, 2))
             return;
-        if (QtMocHelpers::indexOfMethod<void (Loding::*)(account_msg )>(_a, &Loding::accountMsg, 3))
+        if (QtMocHelpers::indexOfMethod<void (Loding::*)(AccountMsg )>(_a, &Loding::accountMsg, 3))
             return;
     }
 }
@@ -177,7 +177,7 @@ void Loding::switchGet()
 }
 
 // SIGNAL 3
-void Loding::accountMsg(account_msg _t1)
+void Loding::accountMsg(AccountMsg _t1)
 {
     QMetaObject::activate<void>(this, &staticMetaObject, 3, nullptr, _t1);
 }

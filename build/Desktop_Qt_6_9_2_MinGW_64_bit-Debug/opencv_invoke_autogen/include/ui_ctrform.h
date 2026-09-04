@@ -14,7 +14,6 @@
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMdiArea>
-#include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QVBoxLayout>
@@ -40,8 +39,6 @@ public:
     QHBoxLayout *horizontalLayout_2;
     QLabel *label;
     MultiSelectComboBox *comboBox;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton;
     QSpacerItem *horizontalSpacer;
     QWidget *widget_2;
     QHBoxLayout *horizontalLayout_3;
@@ -199,25 +196,13 @@ public:
 
         horizontalLayout_2->addWidget(comboBox);
 
-        pushButton_2 = new QPushButton(widget);
-        pushButton_2->setObjectName("pushButton_2");
-
-        horizontalLayout_2->addWidget(pushButton_2);
-
-        pushButton = new QPushButton(widget);
-        pushButton->setObjectName("pushButton");
-
-        horizontalLayout_2->addWidget(pushButton);
-
-        horizontalSpacer = new QSpacerItem(10, 20, QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Minimum);
+        horizontalSpacer = new QSpacerItem(0, 0, QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Minimum);
 
         horizontalLayout_2->addItem(horizontalSpacer);
 
         horizontalLayout_2->setStretch(0, 1);
         horizontalLayout_2->setStretch(1, 5);
         horizontalLayout_2->setStretch(2, 3);
-        horizontalLayout_2->setStretch(3, 3);
-        horizontalLayout_2->setStretch(4, 3);
 
         verticalLayout_2->addWidget(widget);
 
@@ -274,8 +259,6 @@ public:
         CtrForm->setWindowTitle(QCoreApplication::translate("CtrForm", "Form", nullptr));
         label_2->setText(QCoreApplication::translate("CtrForm", "Misaki", nullptr));
         label->setText(QCoreApplication::translate("CtrForm", "\351\200\211\346\213\251\347\233\270\346\234\272", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("CtrForm", "\345\274\200\345\247\213\346\243\200\346\265\213", nullptr));
-        pushButton->setText(QCoreApplication::translate("CtrForm", "\347\273\223\346\235\237\346\243\200\346\265\213", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("CtrForm", "\346\243\200\346\265\213\345\214\272\345\237\237", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("CtrForm", "\346\225\260\346\215\256\345\272\223\345\244\215\346\243\200", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QCoreApplication::translate("CtrForm", "\347\275\221\347\273\234\350\277\236\346\216\245", nullptr));

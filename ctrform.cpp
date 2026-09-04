@@ -4,13 +4,13 @@
 #include<QPixmap>
 #include <QCameraDevice>
 #include <QMediaDevices>
-
+#include"sqlmanager.h"
 CtrForm::CtrForm(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::CtrForm)
 {
     ui->setupUi(this);
-    mannger_=new CameraManager;
+    mannger_=new CameraManager();
     connect(ui->titwid,&TitelIcon::SwitchAcount,this,&CtrForm::SwitchAcount);
     QList<QCameraDevice> cameraList = QMediaDevices::videoInputs();
     QStringList s;
@@ -46,6 +46,7 @@ void CtrForm::createMdi(QString s, bool ok)
 
     if(ok)
     {
+        Singleton<SQLManager>::getInstance();
         mannger_->addWorker(s);
         Form*form=new Form(this);
         form->setAttribute(Qt::WA_StyledBackground, true);
@@ -54,7 +55,7 @@ void CtrForm::createMdi(QString s, bool ok)
         connect(form,&Form::stop_,mannger_->camaer_thread_[s].worker,&CameraWorker::stop,Qt::QueuedConnection);
         auto conn=connect(form,&Form::start_,mannger_->camaer_thread_[s].worker,&CameraWorker::start,Qt::QueuedConnection);
         connect(sub_form_, &QMdiSubWindow::destroyed, this, [=](){
-         mannger_->removeWorker(s); 
+        // mannger_->removeWorker(s);
             mapper_.remove(s);
          qDebug()<<"结束ctr"<<mapper_.size();
             emit closeSub(s);
@@ -63,7 +64,6 @@ void CtrForm::createMdi(QString s, bool ok)
         mapper_[s]=sub_form_;
           qDebug()<<"开启ctr"<<mapper_.size();
         form->show();
-
         ui->mdiArea->tileSubWindows();
 
 
@@ -75,7 +75,7 @@ void CtrForm::createMdi(QString s, bool ok)
         {
             return;
         }
-        mannger_->removeWorker(s);
+       // mannger_->removeWorker(s);
         QMdiSubWindow*sub_mdi=mapper_[s];
         mapper_.remove(s);
         sub_mdi->close();
@@ -83,3 +83,5 @@ void CtrForm::createMdi(QString s, bool ok)
         ui->mdiArea->tileSubWindows();
     }
 }
+
+

@@ -33,7 +33,7 @@ private:
     RegFrom*regfrom_;
     ForgetFrom*forgetfrom_;
     QPointer<account>account_pointer_;
-    account_msg msg_;
+    AccountMsg msg_;
     QPointer<CtrForm> ctr_pointer_;
     QStackedWidget*stack_;
 

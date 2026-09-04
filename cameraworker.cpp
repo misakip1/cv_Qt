@@ -1,13 +1,16 @@
 #include "cameraworker.h"
 #include<QThread>
-#include<QApplication>
+#include"account_msg.h"
 CameraWorker::CameraWorker(
     QCameraDevice device,
     QObject* parent)
     : QObject(parent),
     device_(device)
 {
-    qDebug()<<"woker被创建";
+
+        qDebug() << "[worker ctor]"
+                 << this
+                 << "current =" << QThread::currentThread();
 
 }
 
@@ -15,11 +18,6 @@ void CameraWorker::requestStop()
 {
     stop_.store(true);
     qDebug() << "[worker] requestStop 调用, stop_=true";
-    if (camera_)
-    {
-        camera_->stop();
-        QCoreApplication::processEvents(QEventLoop::AllEvents, 200);
-    }
 }
 
 CameraWorker::~CameraWorker()
@@ -45,6 +43,8 @@ void CameraWorker::start()
     stop_.store(false);
     if(!camera_)
     {
+    machine_code=Singleton<account_msg>::getInstance().getMsg().machine_code;
+    user_name=Singleton<account_msg>::getInstance().getMsg().user_name;
     camera_ = new QCamera(device_);
     cameraName = device_.description();
     cameraCode = device_.id();
@@ -70,15 +70,9 @@ void CameraWorker::stop()
 {   //相机暂停
     qDebug()<<"相机暂停";
     stop_.store(true);
-    // 只停相机，不 delete。
-    // 相机对象是 worker 的子对象，随主线程 delete worker 时统一析构；
-    // 若在此（finished 信号内、事件循环已退出）同步 delete QCamera，
-    // QCamera 析构要停内部后端线程却需要事件循环配合，会死锁导致 run() 不返回。
-    if (camera_)
-    {
-        camera_->stop();
 
-    }
+    if (camera_)
+        camera_->stop();
 }
 
 void CameraWorker::onVideoFrameChanged(const QVideoFrame& frame)
@@ -92,10 +86,14 @@ void CameraWorker::onVideoFrameChanged(const QVideoFrame& frame)
             camera_->stop();
         return;
     }
-
-    image_ = frame.toImage();
     captureTime = QDateTime::currentDateTime();
     camera_form_->captureTime = captureTime;
-    camera_form_->image = image_;
-    emit frameReady(*camera_form_.get());
+    camera_form_->image = frame.toImage();
+    //先测试数据库，填充username
+    camera_form_->user_name="wang";
+    camera_form_->machine_code="1001";
+    camera_form_->imageCode=imageCode_;
+
+    imageCode_++;
+    emit frameReady(camera_form_);
 }

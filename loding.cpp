@@ -4,6 +4,7 @@
 #include<QRegularExpression>
 #include<QJsonObject>
 #include"httpserver.h"
+#include"account_msg.h"
 #include"const.h"
 Loding::Loding(QWidget *parent)
     : QWidget(parent)
@@ -125,10 +126,11 @@ void Loding::http_finsh(Moudel id, QString res, ErrorCodes errorres)
         ui->tip->setText(tr("json解析错误"));
         return;
     }
-    account_msg msg;
+    AccountMsg msg;
     msg.user_name=ui->line_acount->text();
     msg.user_pwd=ui->line_pwd->text();
     msg.machine_code=ui->line_mach->text();
+    Singleton<account_msg>::getInstance().setMsg(msg);
     emit accountMsg(msg);
     emit switchCtr();
 

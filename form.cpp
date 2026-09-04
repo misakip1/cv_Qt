@@ -17,14 +17,13 @@ Form::~Form()
     delete ui;
 }
 
-void Form::showPix(CameraTask task)
+void Form::showPix(QImage image1,QImage image2)
 {
-    map1_=QPixmap::fromImage(task.frame.image);
-   // map2_=QPixmap::fromImage(task.result.image);
-   QPixmap map11_= map1_.scaled(ui->label_3->size(),Qt::KeepAspectRatioByExpanding, Qt::SmoothTransformation);
-  // map2_= map2_.scaled(ui->label_4->size(),Qt::KeepAspectRatioByExpanding, Qt::SmoothTransformation);
-    ui->label_3->setPixmap(map11_);
-    ui->label_4->setPixmap(map11_);
+
+    map1_=QPixmap::fromImage(image1).scaled(ui->label_3->size(),Qt::KeepAspectRatioByExpanding, Qt::SmoothTransformation);
+    map2_= QPixmap::fromImage(image2).scaled(ui->label_4->size(),Qt::KeepAspectRatioByExpanding, Qt::SmoothTransformation);
+    ui->label_3->setPixmap(map1_);
+    ui->label_4->setPixmap(map2_);
 }
 
 void Form::on_pushButton_2_clicked()
@@ -38,5 +37,14 @@ void Form::on_pushButton_clicked()
     qDebug()<<"点击检测";
     qDebug() << "[emit start]"<< "form =" << this;
     emit start_();
+}
+
+
+void Form::on_pushButton_3_clicked()
+{
+    ui->label_3->setPixmap(QPixmap(""));
+    ui->label_4->setPixmap(QPixmap(""));
+
+    emit stop_();
 }
 

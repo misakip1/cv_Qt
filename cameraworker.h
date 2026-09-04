@@ -25,9 +25,7 @@ public:
         QCameraDevice device,
         QObject* parent = nullptr);
 
-    // 主线程直接调用：原子置停止标志，立即对采集线程可见。
-    // 不依赖事件队列（队列可能被高频帧事件占满导致 stop 事件饿死），
-    // 采集线程的下一次帧回调看到该标志后会立即停相机、阻断帧流。
+
     void requestStop();
     ~CameraWorker();
 public slots:
@@ -41,21 +39,22 @@ private :
 
 signals:
     void frameReady(
-       const CameraFrame frame);
+        std::shared_ptr<CameraFrame> frame);
 
     void cameraError(
         QString error);
 
 private:
+    QString user_name;
+    QString machine_code;
     QString cameraName;       // 相机名
     QString cameraCode;       // 相机编号
     QDateTime captureTime;    // 时间戳
-
+    qint64 imageCode_{0};
     QMediaCaptureSession* session_ = nullptr;
     QCamera* camera_ = nullptr;
     QCameraDevice device_;
     QVideoSink* videoSink_ = nullptr;
-    QImage image_;
     std::shared_ptr<CameraFrame> camera_form_;
     QImageCapture* capture_ = nullptr;
 

@@ -32,7 +32,7 @@ signals:
     void switchReg();
     void switchCtr();
     void switchGet();
-    void accountMsg(account_msg);
+    void accountMsg(AccountMsg);
 };
 
 #endif // LODING_H

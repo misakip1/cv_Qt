@@ -10,7 +10,7 @@ class account : public QWidget
 {
     Q_OBJECT  // Qt类必须加，信号槽/元对象需要
 public:
-    explicit account(account_msg msg,QWidget *parent = nullptr);
+    explicit account(AccountMsg msg,QWidget *parent = nullptr);
     ~account();
 
 
@@ -21,5 +21,5 @@ signals:
     void switchCtr();
 private:
     Ui::account *ui;  // 类名和ui的objectName对应
-    account_msg msg_;
+    AccountMsg msg_;
 };

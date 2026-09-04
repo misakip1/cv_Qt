@@ -1,9 +1,9 @@
 #include "account.h"
 #include "ui_account.h"  // uic自动生成的头文件
 #include<QPixmap>
-account::account(account_msg msg,QWidget* par)
+account::account(AccountMsg msg,QWidget* par)
     : QWidget(par)
-    , ui(new Ui::account),msg_(msg)  // 这里是Ui::account，不是Ui::Form
+    , ui(new Ui::account),msg_(msg)
 {
     ui->setupUi(this);
     QPixmap map("E:\\Qt_projet\\opencv_invoke\\title.png");

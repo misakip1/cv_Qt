@@ -1,13 +1,10 @@
 cmake_minimum_required(VERSION 3.19)
 project(opencv_invoke LANGUAGES CXX)
-
+set(OpenCV_DIR "D:\\BaiduNetdiskDownload\\opencv\\build\\x64\\vc16\\lib")
 find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets LinguistTools Network Sql Multimedia MultimediaWidgets)
 find_package(Qt6 REQUIRED COMPONENTS Core)
-find_package(Qt6 REQUIRED COMPONENTS Core)
-find_package(Qt6 REQUIRED COMPONENTS Core)
-find_package(Qt6 REQUIRED COMPONENTS Core)
-find_package(Qt6 REQUIRED COMPONENTS Core)
-find_package(Qt6 REQUIRED COMPONENTS Core)
+
+find_package(OpenCV REQUIRED)
 
 qt_standard_project_setup()
 
@@ -34,6 +31,8 @@ qt_add_executable(opencv_invoke
     cameraworker.h cameraworker.cpp
     cameraprocessor.h cameraprocessor.cpp
     cvinvoke.h cvinvoke.cpp
+    sqlmanager.h sqlmanager.cpp
+    account_msg.h account_msg.cpp
 
 
 )
@@ -59,7 +58,18 @@ target_link_libraries(opencv_invoke PRIVATE Qt6::Core)
 target_link_libraries(opencv_invoke PRIVATE Qt6::Core)
 target_link_libraries(opencv_invoke PRIVATE Qt6::Core)
 target_link_libraries(opencv_invoke PRIVATE Qt6::Core)
+target_link_libraries(opencv_invoke
+    PRIVATE
+        ${OpenCV_LIBS}
+)
+target_link_libraries(opencv_invoke PRIVATE Qt6::Core)
+target_link_libraries(opencv_invoke PRIVATE Qt6::Core)
 
+# 添加 OpenCV 头文件路径
+target_include_directories(opencv_invoke
+    PRIVATE
+        ${OpenCV_INCLUDE_DIRS}
+)
 include(GNUInstallDirs)
 
 install(TARGETS opencv_invoke

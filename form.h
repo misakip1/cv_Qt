@@ -14,10 +14,12 @@ class Form : public QWidget
 public:
     explicit Form(QWidget *parent = nullptr);
     ~Form();
-    void showPix(CameraTask);
+    void showPix(QImage,QImage);
 private slots:
     void on_pushButton_2_clicked();
     void on_pushButton_clicked();
+
+    void on_pushButton_3_clicked();
 
 signals:
     void stop_();

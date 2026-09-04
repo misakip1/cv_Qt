@@ -1,5 +1,5 @@
 #include "cameramanager.h"
-
+#include<QCamera>
 CameraManager::CameraManager(QObject *parent)
     : QObject{parent}
 {
@@ -47,7 +47,8 @@ void CameraManager::addWorker(QString device_name)
         return;
     }
 
-    // 创建 Worker（工作在采集线程）与处理器（工作在主线程）
+    // 创建 Worker（工作在采集线程）与处理器（工作在主线程
+
     CameraWorker* worker = new CameraWorker(map_[device_name]);
 
 
@@ -66,13 +67,7 @@ void CameraManager::addWorker(QString device_name)
     qDebug()<<"创建后camaer_thread_"<<camaer_thread_.size();
     // 启动线程
     thread->start();
-    qDebug()<<"线程启动";
-    bool ok = QMetaObject::invokeMethod(
-        worker,
-        &CameraWorker::start,
-        Qt::QueuedConnection
-        );
- qDebug() << "invoke test =" << ok;
+
 }
 
 void CameraManager::removeWorker(QString device_name)
