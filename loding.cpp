@@ -35,7 +35,7 @@ void Loding::on_pushButton_clicked()
     QJsonObject obj;
     obj["账号"]=ui->line_acount->text();
     obj["密码"]=ui->line_pwd->text();
-    obj["机器号"]=ui->line_mach->text();
+    obj["机器码"]=ui->line_mach->text();
     QUrl url(path+"loding");
     connect(&HttpServer::getInstance(),&HttpServer::lod_finsh_http,this,&Loding::http_finsh);
     HttpServer::getInstance().post(url,obj,Moudel::LodingModel);
@@ -109,23 +109,24 @@ bool Loding::log()
 
 void Loding::http_finsh(Moudel id, QString res, ErrorCodes errorres)
 {
-    if(res.isEmpty()||errorres!=ErrorCodes::SUCCESS)
+    if(res!="Login successful!\r\n"||errorres!=ErrorCodes::SUCCESS)
     {
+        qDebug()<<"res"<<res;
         ui->tip->setText("网络错误没有回包");
         return;
     }
-    QJsonDocument jsonDoc = QJsonDocument::fromJson(res.toUtf8());
-    //json解析错误
-    if(jsonDoc.isNull()){
-        ui->tip->setText(tr("json解析错误"));
-        return;
-    }
+    // QJsonDocument jsonDoc = QJsonDocument::fromJson(res.toUtf8());
+    // //json解析错误
+    // if(jsonDoc.isNull()){
+    //     ui->tip->setText(tr("json解析错误"));
+    //     return;
+    // }
 
-    //json解析错误
-    if(!jsonDoc.isObject()){
-        ui->tip->setText(tr("json解析错误"));
-        return;
-    }
+    // //json解析错误
+    // if(!jsonDoc.isObject()){
+    //     ui->tip->setText(tr("json解析错误"));
+    //     return;
+    // }
     AccountMsg msg;
     msg.user_name=ui->line_acount->text();
     msg.user_pwd=ui->line_pwd->text();

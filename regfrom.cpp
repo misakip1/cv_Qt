@@ -31,16 +31,17 @@ void RegFrom::on_pushButton_2_clicked()
     obj["用户名"] = ui->lineEdit_2->text();
     obj["密码"] = ui->lineEdit_3->text();
     obj["机器名"] = ui->lineEdit_5->text();
-    obj["机器编号"] = ui->lineEdit_6->text();
+    obj["机器码"] = ui->lineEdit_6->text();
     //obj["验证码"] = ui->lineEdit_7->text();
-    connect(&HttpServer::getInstance(),&HttpServer::forget_finsh_http,this,&RegFrom::http_finsh);
+    connect(&HttpServer::getInstance(),&HttpServer::reg_finsh_http,this,&RegFrom::http_finsh);
     QUrl url(path+"Reg");
     HttpServer::getInstance().post(url,obj,Moudel::RegModel);
 
 }
 void RegFrom::http_finsh(Moudel id,QString res,ErrorCodes error)
 {
-    if(res.isEmpty()||error!=ErrorCodes::SUCCESS)
+    qDebug()<<res;
+    if(res!="Registration successful!\r\n"||error!=ErrorCodes::SUCCESS)
     {
         ui->label_8->setText("解析错误");
         return;

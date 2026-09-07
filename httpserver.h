@@ -22,7 +22,6 @@ public:
 private:
     HttpServer();
 
-    QNetworkReply*reply_;
     QNetworkAccessManager*manager_;
     void slot_finsh_http(Moudel id,QString res,ErrorCodes error);
 signals:

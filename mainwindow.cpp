@@ -23,7 +23,7 @@ MainWindow::MainWindow(QWidget *parent)
     account_pointer_=new account(msg_,this);
     connect(account_pointer_,&account::switchCtr,this,&MainWindow::SlotSwitchCtr);
     stack_->addWidget(account_pointer_);
-    SlotSwitchCtr();
+   SlotSwitchCtr();
 
 
 }
