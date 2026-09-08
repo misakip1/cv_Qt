@@ -12,10 +12,13 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMdiArea>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QTabWidget>
+#include <QtWidgets/QTableView>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 #include <multiselectcombobox.h>
@@ -47,6 +50,23 @@ public:
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer_2;
     QWidget *tab_2;
+    QHBoxLayout *horizontalLayout_5;
+    QWidget *widget_5;
+    QHBoxLayout *horizontalLayout_6;
+    QWidget *widget_6;
+    QVBoxLayout *verticalLayout_4;
+    QTableView *tableView;
+    QWidget *widget_7;
+    QVBoxLayout *verticalLayout_3;
+    QLabel *label_3;
+    QWidget *widget_8;
+    QHBoxLayout *horizontalLayout_7;
+    QWidget *widget_9;
+    QWidget *widget_10;
+    QVBoxLayout *verticalLayout_5;
+    QSpacerItem *verticalSpacer;
+    QPushButton *pushButton;
+    QPushButton *pushButton_2;
     QWidget *tab_3;
 
     void setupUi(QWidget *CtrForm)
@@ -236,6 +256,102 @@ public:
         tabWidget->addTab(tab, QString());
         tab_2 = new QWidget();
         tab_2->setObjectName("tab_2");
+        horizontalLayout_5 = new QHBoxLayout(tab_2);
+        horizontalLayout_5->setObjectName("horizontalLayout_5");
+        widget_5 = new QWidget(tab_2);
+        widget_5->setObjectName("widget_5");
+        horizontalLayout_6 = new QHBoxLayout(widget_5);
+        horizontalLayout_6->setObjectName("horizontalLayout_6");
+        widget_6 = new QWidget(widget_5);
+        widget_6->setObjectName("widget_6");
+        verticalLayout_4 = new QVBoxLayout(widget_6);
+        verticalLayout_4->setObjectName("verticalLayout_4");
+        tableView = new QTableView(widget_6);
+        tableView->setObjectName("tableView");
+        tableView->setStyleSheet(QString::fromUtf8("QTableView\n"
+"{\n"
+"    background-color: #f3e5f5;\n"
+"    gridline-color: #ce93d8;\n"
+"    color: #4a148c;\n"
+"    selection-background-color: #e1bee7;\n"
+"    selection-color: #212121;\n"
+"    border:1px solid #ba68c8;\n"
+"}\n"
+"QHeaderView::section\n"
+"{\n"
+"    background-color: #e1bee7;\n"
+"    color:#4a148c;\n"
+"    border: none;\n"
+"    border-right:1px solid #ce93d8;\n"
+"    border-bottom:1px solid #ce93d8;\n"
+"    padding:4px;\n"
+"}\n"
+"QTableView::item\n"
+"{\n"
+"    padding:2px;\n"
+"}\n"
+"QTableView::item:hover\n"
+"{\n"
+"    background-color:#f0e0f7;\n"
+"}"));
+
+        verticalLayout_4->addWidget(tableView);
+
+
+        horizontalLayout_6->addWidget(widget_6);
+
+        widget_7 = new QWidget(widget_5);
+        widget_7->setObjectName("widget_7");
+        verticalLayout_3 = new QVBoxLayout(widget_7);
+        verticalLayout_3->setObjectName("verticalLayout_3");
+        label_3 = new QLabel(widget_7);
+        label_3->setObjectName("label_3");
+
+        verticalLayout_3->addWidget(label_3);
+
+        widget_8 = new QWidget(widget_7);
+        widget_8->setObjectName("widget_8");
+        horizontalLayout_7 = new QHBoxLayout(widget_8);
+        horizontalLayout_7->setObjectName("horizontalLayout_7");
+        widget_9 = new QWidget(widget_8);
+        widget_9->setObjectName("widget_9");
+
+        horizontalLayout_7->addWidget(widget_9);
+
+        widget_10 = new QWidget(widget_8);
+        widget_10->setObjectName("widget_10");
+        verticalLayout_5 = new QVBoxLayout(widget_10);
+        verticalLayout_5->setObjectName("verticalLayout_5");
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+
+        verticalLayout_5->addItem(verticalSpacer);
+
+        pushButton = new QPushButton(widget_10);
+        pushButton->setObjectName("pushButton");
+
+        verticalLayout_5->addWidget(pushButton);
+
+        pushButton_2 = new QPushButton(widget_10);
+        pushButton_2->setObjectName("pushButton_2");
+
+        verticalLayout_5->addWidget(pushButton_2);
+
+
+        horizontalLayout_7->addWidget(widget_10);
+
+
+        verticalLayout_3->addWidget(widget_8);
+
+        verticalLayout_3->setStretch(0, 4);
+        verticalLayout_3->setStretch(1, 1);
+
+        horizontalLayout_6->addWidget(widget_7);
+
+        horizontalLayout_6->setStretch(0, 2);
+        horizontalLayout_6->setStretch(1, 1);
+
+        horizontalLayout_5->addWidget(widget_5);
+
         tabWidget->addTab(tab_2, QString());
         tab_3 = new QWidget();
         tab_3->setObjectName("tab_3");
@@ -248,7 +364,7 @@ public:
 
         retranslateUi(CtrForm);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(CtrForm);
@@ -260,6 +376,9 @@ public:
         label_2->setText(QCoreApplication::translate("CtrForm", "Misaki", nullptr));
         label->setText(QCoreApplication::translate("CtrForm", "\351\200\211\346\213\251\347\233\270\346\234\272", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("CtrForm", "\346\243\200\346\265\213\345\214\272\345\237\237", nullptr));
+        label_3->setText(QString());
+        pushButton->setText(QCoreApplication::translate("CtrForm", "\344\277\235\345\255\230", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("CtrForm", "\345\217\226\346\266\210", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("CtrForm", "\346\225\260\346\215\256\345\272\223\345\244\215\346\243\200", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QCoreApplication::translate("CtrForm", "\347\275\221\347\273\234\350\277\236\346\216\245", nullptr));
     } // retranslateUi

@@ -10,6 +10,7 @@
 #include <QCameraFormat>
 #include <QDebug>
 #include <QImageCapture>
+#include<QElapsedTimer>
 #include <QImage>
 #include <atomic>
 #include "const.h"
@@ -44,6 +45,7 @@ signals:
     void cameraError(
         QString error);
 
+
 private:
     QString user_name;
     QString machine_code;
@@ -59,6 +61,7 @@ private:
     QImageCapture* capture_ = nullptr;
 
     std::atomic<bool> stop_{false};   // 跨线程停止标志（原子，无锁）
+
 };
 
 #endif

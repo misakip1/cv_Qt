@@ -61,9 +61,10 @@ void CameraManager::addWorker(QString device_name)
     // 线程启动后，在 worker 线程执行 start（创建相机并开始采集）
     // worker 出帧 -> 处理器（跨线程，AutoConnection 自动变 QueuedConnection，帧投递回主线程）
     connect(worker, &CameraWorker::frameReady, processor_, &CameraProcessor::onFrameReady);
-
+    cvMgr* cvmgr_=new cvMgr(this);
+    connect(cvmgr_,&cvMgr::processorConfig,processor_,&CameraProcessor::setConfig);
     // 保存摄像头对应的 Worker 和线程
-    camaer_thread_[device_name] = { device_name, worker, thread, processor_ };
+    camaer_thread_[device_name] = { device_name, worker, thread, processor_ ,cvmgr_};
     qDebug()<<"创建后camaer_thread_"<<camaer_thread_.size();
     // 启动线程
     thread->start();

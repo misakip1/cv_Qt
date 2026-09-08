@@ -42,7 +42,13 @@ template <> constexpr inline auto CtrForm::qt_create_metaobjectdata<qt_meta_tag_
         "SwitchAcount",
         "",
         "closeSub",
-        "createMdi"
+        "createMdi",
+        "flashTabelView",
+        "on_tableView_doubleClicked",
+        "QModelIndex",
+        "index",
+        "on_pushButton_clicked",
+        "on_pushButton_2_clicked"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -56,6 +62,16 @@ template <> constexpr inline auto CtrForm::qt_create_metaobjectdata<qt_meta_tag_
         QtMocHelpers::SlotData<void(QString, bool)>(4, 2, QMC::AccessPublic, QMetaType::Void, {{
             { QMetaType::QString, 2 }, { QMetaType::Bool, 2 },
         }}),
+        // Slot 'flashTabelView'
+        QtMocHelpers::SlotData<void()>(5, 2, QMC::AccessPublic, QMetaType::Void),
+        // Slot 'on_tableView_doubleClicked'
+        QtMocHelpers::SlotData<void(const QModelIndex &)>(6, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { 0x80000000 | 7, 8 },
+        }}),
+        // Slot 'on_pushButton_clicked'
+        QtMocHelpers::SlotData<void()>(9, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_pushButton_2_clicked'
+        QtMocHelpers::SlotData<void()>(10, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -82,6 +98,10 @@ void CtrForm::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
         case 0: _t->SwitchAcount(); break;
         case 1: _t->closeSub((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 2: _t->createMdi((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<bool>>(_a[2]))); break;
+        case 3: _t->flashTabelView(); break;
+        case 4: _t->on_tableView_doubleClicked((*reinterpret_cast< std::add_pointer_t<QModelIndex>>(_a[1]))); break;
+        case 5: _t->on_pushButton_clicked(); break;
+        case 6: _t->on_pushButton_2_clicked(); break;
         default: ;
         }
     }
@@ -112,14 +132,14 @@ int CtrForm::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 7;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 3)
+        if (_id < 7)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 3;
+        _id -= 7;
     }
     return _id;
 }

@@ -11,7 +11,7 @@
 #include <QThread>
 #include "cameraworker.h"
 #include "cameraprocessor.h"
-
+#include"cvmgr.h"
 // 摄像头线程信息：记录每个摄像头对应的 worker、线程、处理器
 struct camaer_thread
 {
@@ -19,6 +19,8 @@ struct camaer_thread
     CameraWorker* worker;
     QThread* thread;
     CameraProcessor* processor_;
+    cvMgr*cvMgr_;
+
 };
 
 // 相机管理器：负责枚举摄像头、创建/销毁采集线程。

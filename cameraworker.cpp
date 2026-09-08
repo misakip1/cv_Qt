@@ -77,6 +77,7 @@ void CameraWorker::stop()
 
 void CameraWorker::onVideoFrameChanged(const QVideoFrame& frame)
 {
+
     if (stop_.load()) {
         static std::atomic<int> shortCnt{0};
         if (videoSink_)

@@ -4,8 +4,10 @@
 #include <QLocale>
 #include <QTranslator>
 #include<QIcon>
+
 int main(int argc, char *argv[])
 {
+    cv::setUseOptimized(false);
     QApplication a(argc, argv);
 
     QTranslator translator;

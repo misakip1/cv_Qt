@@ -18,7 +18,6 @@
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
-#include <multiselectcombobox.h>
 
 QT_BEGIN_NAMESPACE
 
@@ -28,12 +27,12 @@ public:
     QVBoxLayout *verticalLayout;
     QWidget *widget_5;
     QHBoxLayout *horizontalLayout_5;
-    QLabel *label_5;
-    MultiSelectComboBox *comboBox;
+    QPushButton *pushButton_4;
     QFrame *line;
     QPushButton *pushButton;
     QPushButton *pushButton_2;
     QPushButton *pushButton_3;
+    QSpacerItem *horizontalSpacer_2;
     QWidget *widget;
     QHBoxLayout *horizontalLayout_2;
     QWidget *widget_2;
@@ -53,7 +52,7 @@ public:
     {
         if (Form->objectName().isEmpty())
             Form->setObjectName("Form");
-        Form->resize(439, 340);
+        Form->resize(612, 454);
         Form->setStyleSheet(QString::fromUtf8("QWidget#Form{\n"
 "    background-color: #E2C5E2;\n"
 "}"));
@@ -63,15 +62,10 @@ public:
         widget_5->setObjectName("widget_5");
         horizontalLayout_5 = new QHBoxLayout(widget_5);
         horizontalLayout_5->setObjectName("horizontalLayout_5");
-        label_5 = new QLabel(widget_5);
-        label_5->setObjectName("label_5");
+        pushButton_4 = new QPushButton(widget_5);
+        pushButton_4->setObjectName("pushButton_4");
 
-        horizontalLayout_5->addWidget(label_5);
-
-        comboBox = new MultiSelectComboBox(widget_5);
-        comboBox->setObjectName("comboBox");
-
-        horizontalLayout_5->addWidget(comboBox);
+        horizontalLayout_5->addWidget(pushButton_4);
 
         line = new QFrame(widget_5);
         line->setObjectName("line");
@@ -94,6 +88,10 @@ public:
         pushButton_3->setObjectName("pushButton_3");
 
         horizontalLayout_5->addWidget(pushButton_3);
+
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_5->addItem(horizontalSpacer_2);
 
 
         verticalLayout->addWidget(widget_5);
@@ -169,7 +167,7 @@ public:
     void retranslateUi(QWidget *Form)
     {
         Form->setWindowTitle(QCoreApplication::translate("Form", "Form", nullptr));
-        label_5->setText(QCoreApplication::translate("Form", "\346\243\200\346\265\213\346\226\271\346\241\210", nullptr));
+        pushButton_4->setText(QCoreApplication::translate("Form", "\351\200\211\346\213\251\346\243\200\346\265\213\346\226\271\346\241\210", nullptr));
         pushButton->setText(QCoreApplication::translate("Form", "\345\274\200\345\247\213\346\243\200\346\265\213", nullptr));
         pushButton_2->setText(QCoreApplication::translate("Form", "\346\232\202\345\201\234\346\243\200\346\265\213", nullptr));
         pushButton_3->setText(QCoreApplication::translate("Form", "\345\201\234\346\255\242\346\243\200\346\265\213", nullptr));
