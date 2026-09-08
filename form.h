@@ -18,6 +18,7 @@ public:
     ~Form();
     void showPix(std::shared_ptr<CameraTask>);
     bool checkConfig();
+
 public slots:
     void setConfig(std::shared_ptr<AlgorithmConfig> msg);
     void setFps(double fps);
@@ -39,6 +40,8 @@ private:
     QPixmap map2_;
     std::shared_ptr<AlgorithmConfig >config_;
     AlgorithmDialog*config_form_;
+    std::mutex mtx_;
+    qint64 imagecode_;
 };
 
 #endif // FORM_H

@@ -43,40 +43,70 @@ void CameraProcessor::CvInvoke(std::shared_ptr<CameraFrame> frame,AlgorithmConfi
     }, Qt::QueuedConnection);
 }
 
+void CameraProcessor::subPoll(std::shared_ptr<CameraFrame>  frame)
+{
+    if (active_tasks_.load() >= MAX_CONCURRENT) {
 
+        return;
+    }
+    active_tasks_.fetch_add(1);
+    ThreadPoll::getInstance().post([this, frame]() {
+        try {
+            CvInvoke(frame, config_);
+        } catch (...) {
+
+            active_tasks_.fetch_sub(1);
+            tryProcessNext();
+            return;
+        }
+        active_tasks_.fetch_sub(1);
+        // 处理完成后从队列中拉取下一帧
+        tryProcessNext();
+    });
+}
+
+void CameraProcessor::tryProcessNext() {
+    std::lock_guard<std::mutex> lock(queue_mutex_);
+    if (queue_.empty()) return;
+    if (active_tasks_.load() >= MAX_CONCURRENT) return;
+    auto frame = queue_.front();
+    queue_.pop();
+    subPoll(frame);
+}
 
 void CameraProcessor::onFrameReady(std::shared_ptr<CameraFrame> frame)
 {
-    frame_ = frame;
-    if (stop_.load())
-        return;               // 已停止，丢弃新帧
-    qint64 curT = m_timer.elapsed();
-    m_timeList.append(curT);
-
-    // 超出窗口大小，删掉最旧一帧
-    if(m_timeList.size() > m_winSize)
     {
-        m_timeList.removeFirst();
-    }
+        std::lock_guard<std::mutex> lock(queue_mutex_);
+        if (queue_.size() < MAX_QUEUE_SIZE) {
+            queue_.push(frame);
+            // 更新 FPS
+            qint64 curT = m_timer.elapsed();
+            m_timeList.append(curT);
 
-    // 窗口填满之后才计算FPS
-    if(m_timeList.size() >= 30)
-    {
-        qint64 deltaMs = m_timeList.last() - m_timeList.first();
-        // 帧数 / 总秒数
-        double fps = (m_timeList.size()-1) / (deltaMs / 1000.0);
-        emit sendFps(fps);
-    }
-    stop_.store(true);        // 标记"检测进行中"，同一时刻只处理一帧（丢帧）
-    ThreadPoll::getInstance().post([this]() mutable {
-        try {
-            CvInvoke(this->frame_, config_);
-        } catch (...) {
-            stop_.store(false);   // 异常也要复位，否则后续帧被永久丢弃
-            throw;
+            // 超出窗口大小，删掉最旧一帧
+            if(m_timeList.size() > m_winSize)
+            {
+                m_timeList.removeFirst();
+            }
+
+            // 窗口填满之后才计算FPS
+            if(m_timeList.size() >= 30)
+            {
+                qint64 deltaMs = m_timeList.last() - m_timeList.first();
+                // 帧数 / 总秒数
+                double fps = (m_timeList.size()-1) / (deltaMs / 1000.0);
+                emit sendFps(fps);
+            }
+
+        } else {
+            queue_.pop();
+            queue_.push(frame);
+            // 队列满，覆盖最旧帧
         }
-        stop_.store(false);       // 检测完成，复位
-    });
+    }
+      tryProcessNext();
+
 }
 
 void CameraProcessor::stop()

@@ -536,6 +536,7 @@ E:/Qt_projet/opencv_invoke/cameraprocessor.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/QElapsedTimer
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/QObject
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/QString
+ mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/QTimer
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/q17memory.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/q20functional.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/q20iterator.h
@@ -543,6 +544,7 @@ E:/Qt_projet/opencv_invoke/cameraprocessor.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/q20type_traits.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/q20utility.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/q23utility.h
+ mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qabstracteventdispatcher.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qalgorithms.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qanystringview.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qarraydata.h
@@ -552,6 +554,7 @@ E:/Qt_projet/opencv_invoke/cameraprocessor.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qatomic.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qatomic_cxx11.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qbasicatomic.h
+ mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qbasictimer.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qbindingstorage.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qbytearray.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qbytearrayalgorithms.h
@@ -572,9 +575,11 @@ E:/Qt_projet/opencv_invoke/cameraprocessor.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qdarwinhelpers.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qdatastream.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qdatetime.h
+ mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qdeadlinetimer.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qdebug.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qelapsedtimer.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qendian.h
+ mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qeventloop.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qexceptionhandling.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qflags.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qfloat16.h
@@ -649,6 +654,7 @@ E:/Qt_projet/opencv_invoke/cameraprocessor.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qtenvironmentvariables.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qtextstream.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qtformat_impl.h
+ mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qtimer.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qtmetamacros.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qtnoop.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qtpreprocessorsupport.h
@@ -3331,6 +3337,7 @@ E:/Qt_projet/opencv_invoke/cameramanager.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/QObject
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/QString
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/QThread
+ mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/QTimer
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/q17memory.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/q20functional.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/q20iterator.h
@@ -3338,6 +3345,7 @@ E:/Qt_projet/opencv_invoke/cameramanager.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/q20type_traits.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/q20utility.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/q23utility.h
+ mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qabstracteventdispatcher.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qalgorithms.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qanystringview.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qarraydata.h
@@ -3347,6 +3355,7 @@ E:/Qt_projet/opencv_invoke/cameramanager.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qatomic.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qatomic_cxx11.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qbasicatomic.h
+ mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qbasictimer.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qbindingstorage.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qbytearray.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qbytearrayalgorithms.h
@@ -3371,6 +3380,7 @@ E:/Qt_projet/opencv_invoke/cameramanager.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qdebug.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qelapsedtimer.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qendian.h
+ mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qeventloop.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qexceptionhandling.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qflags.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qfloat16.h
@@ -3446,6 +3456,7 @@ E:/Qt_projet/opencv_invoke/cameramanager.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qtextstream.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qtformat_impl.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qthread.h
+ mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qtimer.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qtmetamacros.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qtnoop.h
  mdp:E:/Qt/6.9.2/mingw_64/include/QtCore/qtpreprocessorsupport.h

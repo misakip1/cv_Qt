@@ -32,11 +32,22 @@ void Form::setFps(double fps)
 }
 void Form::showPix(std::shared_ptr<CameraTask> task)
 {
-
-    map1_=QPixmap::fromImage(task->image1_).scaled(ui->label_3->size(),Qt::KeepAspectRatioByExpanding, Qt::SmoothTransformation);
-    map2_= QPixmap::fromImage(task->image2_).scaled(ui->label_4->size(),Qt::KeepAspectRatioByExpanding, Qt::SmoothTransformation);
-    ui->label_3->setPixmap(map1_);
-    ui->label_4->setPixmap(map2_);
+    {
+        std::lock_guard<std::mutex> lk_(mtx_);
+        qint64 imageCode=task->imageCode.toLongLong();
+        if(imageCode>imagecode_)
+        {
+            imagecode_=imageCode;
+        }
+        else
+        {
+            return;
+        }
+        map1_=QPixmap::fromImage(task->image1_).scaled(ui->label_3->size(),Qt::KeepAspectRatioByExpanding, Qt::SmoothTransformation);
+        map2_= QPixmap::fromImage(task->image2_).scaled(ui->label_4->size(),Qt::KeepAspectRatioByExpanding, Qt::SmoothTransformation);
+        ui->label_3->setPixmap(map1_);
+        ui->label_4->setPixmap(map2_);
+    }
 }
 
 bool Form::checkConfig()

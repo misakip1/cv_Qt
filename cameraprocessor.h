@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include "threadpoll.h"
+#include<QTimer>
 #include "const.h"
 #include <atomic>
 #include<QElapsedTimer>
@@ -15,7 +16,8 @@ class CameraProcessor : public QObject
 public:
     explicit CameraProcessor(QObject *parent = nullptr);
     void CvInvoke(std::shared_ptr<CameraFrame> image,AlgorithmConfig msg);   // 在线程池线程执行，检测并回主线程发结果
-
+    void subPoll(std::shared_ptr<CameraFrame> queue);
+    void tryProcessNext();
 public slots:
     void onFrameReady(std::shared_ptr<CameraFrame> frame);   // 接收一帧（主线程执行）
     void stop();                            // 停止接收新帧
@@ -28,6 +30,12 @@ private:
     QElapsedTimer m_timer;
     QList<qint64> m_timeList;
     const int m_winSize = 30; // 滑动窗口：统计最近20帧，可调整，越大越平滑
+    std::queue<std::shared_ptr<CameraFrame>> queue_;
+    std::atomic<int> active_tasks_{0};           // 当前正在执行的任务数
+    std::mutex queue_mutex_;                     // 保护 queue
+    const int MAX_CONCURRENT = 4;                // 根据硬件调整，如线程池线程数
+    const int MAX_QUEUE_SIZE = 10;               // 队列最大缓存数（原 MAX_PIX）
+
 signals:
          void sendFps(double fps);
     void cv_finsh(std::shared_ptr<CameraTask>);   // 检测完成信号（主线程发出）
